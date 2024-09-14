@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #070707;
+  --light-black: #1f1f1f;
+  --foreground: #F5F5F5;
+  --accent: #55FFAA;
+  --light-accent: #A5FAD0;
+  --dark-accent: #691FFF;
+  --background-trans: rgba(7, 7, 7, 0.99);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  font-family: "Open Sans", sans-serif;
 }
