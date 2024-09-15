@@ -69,7 +69,7 @@ function CursorBlinker() {
     <motion.div
       variants={cursorVariants}
       animate="blinking"
-      className="inline-block h-5 w-[1px] translate-y-1 bg-slate-900"
+      className="inline-block h-5 w-[1px] translate-y-1 bg-accent"
     />
   );
 }
@@ -98,7 +98,7 @@ export function AnimText({ delay }: IAnimTextProps) {
   }, []);
 
   return (
-    <span className="text-xl text-accent">
+    <span className="text-2xl text-accent">
       {baseText} <motion.span>{displayText}</motion.span>
       <RedoAnimText delay={delay + 1} />
       <CursorBlinker />
