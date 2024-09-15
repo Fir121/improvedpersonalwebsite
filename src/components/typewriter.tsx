@@ -98,7 +98,7 @@ export function AnimText({ delay }: IAnimTextProps) {
   }, []);
 
   return (
-    <span className="text-2xl text-accent">
+    <span className="text-xl text-accent">
       {baseText} <motion.span>{displayText}</motion.span>
       <RedoAnimText delay={delay + 1} />
       <CursorBlinker />
