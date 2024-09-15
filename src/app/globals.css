@@ -34,15 +34,16 @@ body {
 .menu-break{
   height: 100%;
   padding: 0.5rem 1rem;
+  width: 100%;
 }
 
 .menu-item{
   color: var(--foreground);
-  height: 95%;
+  height: 100%;
+  width: 100%;
   align-content: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.75rem;
   cursor: pointer;
   z-index: 40;
   transition: 0.6s;
@@ -50,8 +51,7 @@ body {
 }
 
 .menu-item:hover{
-  background: var(--accent);
-  color: var(--background);
+  background: #4309b8;
 }
 
 .menu-item p{
@@ -60,10 +60,17 @@ body {
 
 .menu-item svg{
   margin: auto;
+  height: 40%;
+  width: 40%;
 }
 
 @media (max-width: 768px){
   .menu-item p{
     display: none;
+  }
+
+  .menu-item svg{
+    height: 70%;
+    width: 70%;
   }
 }

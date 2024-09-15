@@ -4,7 +4,7 @@ import { BackgroundSlider } from "@/components/project-slide-bg";
 
 export default function Home() {
   return (
-    <div>
+    <div className="select-none">
       <DynamicNav/>
 
       <div className="relative min-h-screen">

@@ -1,6 +1,6 @@
 export const projects = [
     {
-        "datetime": null,
+        "datetime": "2023-08-01",
         "title": "CBee.AI",
         "shorttitle": "cbee",
         "images": ["/project-images/cbee/1.jpg", "/project-images/cbee/2.jpg", "/project-images/cbee/3.jpg", "/project-images/cbee/4.jpg", "/project-images/cbee/5.jpg", "/project-images/cbee/6.jpg"],
@@ -13,7 +13,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2024-01-01",
         "title": "Employee Conversational Training Module",
         "shorttitle": "traj",
         "images": ["/project-images/traj/1.jpg", "/project-images/traj/2.jpg"],
@@ -26,7 +26,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2022-09-01",
         "title": "Cleaning Supervision Module",
         "shorttitle": "dm",
         "images": ["/project-images/dm/1.jpg", "/project-images/dm/2.jpg", "/project-images/dm/3.jpg", "/project-images/dm/4.jpg"],
@@ -39,7 +39,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2022-07-01",
         "title": "Prime FM Company Website",
         "shorttitle": "pfm-homepage",
         "images": ["/project-images/homepage/1.jpg", "/project-images/homepage/2.jpg", "/project-images/homepage/3.jpg"],
@@ -52,7 +52,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2022-08-01",
         "title": "Solar Panel Maintenance Module",
         "shorttitle": "solar",
         "images": ["/project-images/solar/1.jpg", "/project-images/solar/2.jpg", "/project-images/solar/3.jpg"],
@@ -65,7 +65,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2024-01-01",
         "title": "Building Checklist Module",
         "shorttitle": "building",
         "images": ["/project-images/building/1.jpg", "/project-images/building/2.jpg", "/project-images/building/3.jpg", "/project-images/building/4.jpg", "/project-images/building/5.jpg"],
@@ -78,7 +78,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2023-11-01",
         "title": "CIIED Website",
         "shorttitle": "ciiedpage",
         "images": ["/project-images/ciiedpage/1.jpg", "/project-images/ciiedpage/2.jpg", "/project-images/ciiedpage/3.jpg"],
@@ -91,7 +91,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2023-12-01",
         "title": "Emissions Tracker",
         "shorttitle": "emissions",
         "images": ["/project-images/emissions/1.jpg", "/project-images/emissions/2.jpg", "/project-images/emissions/3.jpg"],
@@ -104,7 +104,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2021-08-01",
         "title": "StreamGrounds",
         "shorttitle": "streamgrounds",
         "images": ["/project-images/streamgrounds/1.jpg", "/project-images/streamgrounds/2.jpg", "/project-images/streamgrounds/3.jpg", "/project-images/streamgrounds/4.jpg"],
@@ -117,7 +117,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2021-09-01",
         "title": "FairGrounds",
         "shorttitle": "fairgrounds",
         "images": ["/project-images/fairgrounds/1.jpg", "/project-images/fairgrounds/2.jpg", "/project-images/fairgrounds/3.jpg", "/project-images/fairgrounds/4.jpg"],
@@ -130,7 +130,7 @@ export const projects = [
         "category": "website"
     },
     {
-        "datetime": null,
+        "datetime": "2021-12-01",
         "title": "Social",
         "shorttitle": "social",
         "images": ["/project-images/social/1.jpg", "/project-images/social/2.jpg", "/project-images/social/3.jpg"],
