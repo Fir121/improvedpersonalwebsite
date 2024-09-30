@@ -12,32 +12,32 @@ export type ProjectType = {
     category: string;
 }
 
-export const projects = [
+export const projects: ProjectType[] = [
     {
         "datetime": "2023-08-01",
         "title": "CBee.AI",
         "shorttitle": "cbee",
         "images": ["/project-images/cbee/1.jpg", "/project-images/cbee/2.jpg", "/project-images/cbee/3.jpg", "/project-images/cbee/4.jpg", "/project-images/cbee/5.jpg", "/project-images/cbee/6.jpg"],
-        "description": "CBee.ai is a webapp giving users access to Generative AI tools for Digital Marketers with features such as Text to Video, URL To Video, Google Drive video suggestions, video customisations and more, pioneering the field of automated portrait style social media video generation.\nThis webapp has been handed over and is currently being maintained by the CBee.ai team after its successful launch.",
+        "description": "CBee.ai is a webApp giving users access to Generative AI tools for Digital Marketers with features such as Text to Video, URL To Video, Google Drive video suggestions, video customisations and more, pioneering the field of automated portrait style social media video generation.\nThis webApp has been handed over and is currently being maintained by the CBee.ai team after its successful launch.",
         "url": "https://cbee.ai",
         "code_url": null,
         "links": [],
         "features": ["SEO Optimised", "Generative AI used to generate videos", "Highly customisable videos from the designs to the script"],
         "tech": ["React", "Python", "FastAPI", "GPT-3.5 API", "Azure Cognitive Services", "Azure Speech Services", "AWS S3 API", "Nginx", "Linux"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2024-01-01",
         "title": "Employee Conversational Training Module",
         "shorttitle": "traj",
         "images": ["/project-images/traj/1.jpg", "/project-images/traj/2.jpg"],
-        "description": "This module was built as an improvement to the existing training process for new employees. The module is a chatbot that guides the user through the training process through a hands on scenario conversation. It utilises the GPT-3.5 API to add highly sophisticated language processing and accurate scoring. The module is built to be highly configurable, allowing the admin to add, edit and delete questions and answers as needed.",
+        "description": "This module was built as an improvement to the existing training process for new employees. The module is a chatbot that GUIdes the user through the training process through a hands on scenario conversation. It utilises the GPT-3.5 API to add highly sophisticated language processing and accurate scoring. The module is built to be highly configurable, allowing the admin to add, edit and delete questions and answers as needed.",
         "url": null,
         "code_url": null,
         "links": [],
         "features": ["Text to Speech", "Conversational and friendly interface", "Ability to add, edit and delete roleplays", "Completely integrated with existing MCQ infrastructure allowing for ease of adoption"],
         "tech": ["HTML", "CSS", "JavaScript", "Python", "Flask", "GPT-3.5 API", "MySQL"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2022-09-01",
@@ -50,7 +50,7 @@ export const projects = [
         "links": [],
         "features": ["Checklist Management", "Geotagging and timestamping checklist entries", "Highly configurable settings that allow administrators to add, edit and delete users, roles and locations", "Exporting the reports in excel in different necessary formats."],
         "tech": ["HTML", "CSS", "JavaScript", "Python", "Flask", "MySQL"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2022-07-01",
@@ -63,7 +63,7 @@ export const projects = [
         "links": [],
         "features": ["SEO Optimised", "Google Captcha for forms", "Admin Panel"],
         "tech": ["HTML", "CSS", "JavaScript", "Python", "Flask", "MySQL"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2022-08-01",
@@ -74,9 +74,9 @@ export const projects = [
         "url": null,
         "code_url": null,
         "links": [],
-        "features": ["Simultaneous work order creation", "Pick up where you left off in the form (autosaving)", "Geotagging and timestamping images", "Taking and recording client signature", "Exporting the reports in excel, including images", "Manage different view, edit, create permissions for different account types (Supervisors, Employees, Clients)"],
+        "features": ["Simultaneous work order creation", "Pick up where you left off in the form (autosaving)", "Geotagging and timestamping images", "Taking and recording CLIent signature", "Exporting the reports in excel, including images", "Manage different view, edit, create permissions for different account types (Supervisors, Employees, CLIents)"],
         "tech": ["HTML", "CSS", "JavaScript", "Python", "Flask", "MySQL"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2024-01-01",
@@ -89,46 +89,46 @@ export const projects = [
         "links": [],
         "features": ["Daily Checklist creation for various properties", "Shows the list of units in the building per checklist", "Allows admins to generate and export (to excel) reports as needed (with filters)", "Option to view daily progress (Completed, ongoing, incomplete)", "Can easily add, remove or edit forms, units and buldings as needed with no changes in the API and frontend code.", "Manage different view, edit, create permissions for different account types (Supervisors, Employees)."],
         "tech": ["HTML", "CSS", "JavaScript", "Python", "Flask", "MySQL"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2023-11-01",
         "title": "CIIED Website",
         "shorttitle": "ciiedpage",
         "images": ["/project-images/ciiedpage/1.jpg", "/project-images/ciiedpage/2.jpg", "/project-images/ciiedpage/3.jpg"],
-        "description": "CIIED is the Centre for Incubation, Innovation & Entrepreneurship, Dubai, for BITS Pilani, Dubai Campus. As CIIED's Web Developer I built the website, and I maintain and update it's content. I have made adding events (the most frequently updated part of the site) into a simple task by automating it with a JSON file.",
-        "url": "https://ciied.netlify.app/",
+        "description": "CIIED is the Centre for Incubation, Innovation & Entrepreneurship, Dubai, for BITS Pilani, Dubai Campus. As CIIED's Web Developer I built the Website, and I maintain and update it's content. I have made adding events (the most frequently updated part of the site) into a simple task by automating it with a JSON file.",
+        "url": "https://ciied.netlify.App/",
         "code_url": null,
         "links": [],
         "features": ["SEO Optimised", "JSON Automation for quick and easy updation", "Clean and simple Design"],
         "tech": ["HTML", "CSS", "JavaScript"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2023-12-01",
         "title": "Emissions Tracker",
         "shorttitle": "emissions",
         "images": ["/project-images/emissions/1.jpg", "/project-images/emissions/2.jpg", "/project-images/emissions/3.jpg"],
-        "description": "It is a Carbon Emissions Tracker, as global warming intensifies and the threat grows larger, this website serves as a great source of awareness, you can use it to keep track of your emissions, use the search bar to find a source of emissions and add it to your record. It may suprise users to know how large the emissions are even for simple tasks.",
-        "url": "https://emissiontracker.netlify.app",
+        "description": "It is a Carbon Emissions Tracker, as global warming intensifies and the threat grows larger, this Website serves as a great source of awareness, you can use it to keep track of your emissions, use the search bar to find a source of emissions and add it to your record. It may suprise users to know how large the emissions are even for simple tasks.",
+        "url": "https://emissiontracker.netlify.App",
         "code_url": "https://github.com/Fir121/Carbon-Footprint-Tracker",
         "links": [],
         "features": [],
         "tech": ["HTML", "CSS", "JavaScript"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2021-08-01",
         "title": "StreamGrounds",
         "shorttitle": "streamgrounds",
         "images": ["/project-images/streamgrounds/1.jpg", "/project-images/streamgrounds/2.jpg", "/project-images/streamgrounds/3.jpg", "/project-images/streamgrounds/4.jpg"],
-        "description": "At StreamGrounds users can download torrents and store them, so they can watch them from any device just like NETFLIX (but without content limitations ;).\nUser accounts are linked to my service called TheGrounds with sign ups based on a referral system.\nScreenshots show a sample torrent of a public domain Charlie Chaplin movie torrent.\nCurrently the website deletes movies after 14 days to save space since my home server (RPi 4) is limited.",
+        "description": "At StreamGrounds users can download torrents and store them, so they can watch them from any device just like NETFLIX (but without content limitations ;).\nUser accounts are linked to my service called TheGrounds with sign ups based on a referral system.\nScreenshots show a sample torrent of a public domain Charlie Chaplin movie torrent.\nCurrently the Website deletes movies after 14 days to save space since my home server (RPi 4) is limited.",
         "url": "https://thegrounds.pythonanywhere.com/streamgrounds",
         "code_url": null,
         "links": [],
         "features": ["Intuitive workflow", "Downloads sharing between users to eliminate initial download time", "Pick Up where you left off watching"],
         "tech": ["HTML", "CSS", "JavaScript", "Python", "Bash", "Flask", "Raspberry Pi", "Ngrok", "Nginx", "Linux"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2021-09-01",
@@ -141,7 +141,7 @@ export const projects = [
         "features": ["Automatic emails can be sent for sharing", "Links never expire", "Can send any file types, to combined sizes as large as 10GB"],
         "links": [],
         "tech": ["HTML", "CSS", "JavaScript", "Python", "Bash", "Flask", "Raspberry Pi", "Ngrok", "Nginx", "Linux"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2021-12-01",
@@ -149,51 +149,51 @@ export const projects = [
         "shorttitle": "social",
         "images": ["/project-images/social/1.jpg", "/project-images/social/2.jpg", "/project-images/social/3.jpg"],
         "description": "Social is a fully functioning prototype for a truly Social, Social Network, basically a social Network where people can help their community.",
-        "url": "https://thesocialnetwork.netlify.app/#/",
+        "url": "https://thesocialnetwork.netlify.App/#/",
         "code_url": "https://github.com/Fir121/Social",
         "links": ["https://medium.com/@f20210116/journey-to-social-a-truly-social-social-network-fb17e6452d7f", "https://youtu.be/E62ho-K_emY"],
         "features": ["Sign Up, Log In", "A working posts feed and comments section", "Lists of volunteering opportunities and ability to \"volunteer now\""],
         "tech": ["Flutter", "Dart", "Flask", "Postman", "MySQL"],
-        "category": "website"
+        "category": "Website"
     },
     {
         "datetime": "2021-01-01",
         "title": "PharmaChain",
         "shorttitle": "pharmachain",
         "images": ["/project-images/pharmachain/1.jpg", "/project-images/pharmachain/2.jpg", "/project-images/pharmachain/3.jpg"],
-        "description": "PharmaChain is a prototype of a mobile application that allows you to order medicines with full transparency, and reliability.\nPharmaChain uses Blockchain technology to provide complete tracking and security over the entire process. It also keeps track of temperature and expiry conditions for pharmaceuticals and uses a smart contract to take action if needed.\nPharmaChain was a finalist at the Technocare E-Cell MUJ Hackathon.",
+        "description": "PharmaChain is a prototype of a mobile Application that allows you to order medicines with full transparency, and reliability.\nPharmaChain uses Blockchain technology to provide complete tracking and security over the entire process. It also keeps track of temperature and expiry conditions for pharmaceuticals and uses a smart contract to take action if needed.\nPharmaChain was a finalist at the Technocare E-Cell MUJ Hackathon.",
         "url": "https://pharmachain.pythonanywhere.com/",
         "code_url": null,
         "links": ["https://www.youtube.com/watch?v=TC9nzvURWAs"],
         "features": ["Blockchain based data storage for reliability in the supply chain", "Fully functioning order cart, checkout system", "Ability to add prescriptions and automate orders"],
         "tech": ["Flutter", "Dart", "Flask", "Blockchain"],
-        "category": "app"
+        "category": "App"
     },
     {
         "datetime": "2021-02-01",
         "title": "Scooty",
         "shorttitle": "scooty",
         "images": ["/project-images/scooty/1.jpg"],
-        "description": "Scooty was an app built to solve an RTA (Roads and Transport Authority) Dubai problem with e-scooters.\nThe app promotes safe e-scooter driving, it can issue training and subsequently licenses. \nIt allows users to gain points for their rides based on their safety score.\nAdditionally, the prototype has a working computer vision helmet detection system.\nScooty won first place at the RTA Public Transport Hackathon 2022.",
+        "description": "Scooty was an App built to solve an RTA (Roads and Transport Authority) Dubai problem with e-scooters.\nThe App promotes safe e-scooter driving, it can issue training and subsequently licenses. \nIt allows users to gain points for their rides based on their safety score.\nAdditionally, the prototype has a working computer vision helmet detection system.\nScooty won first place at the RTA Public Transport Hackathon 2022.",
         "url": null,
         "code_url": null,
         "links": ["https://drive.google.com/file/d/1h9Y0J2fnoCHTXmxT2g-JgtL-QE34j3eV/view?usp=sharing"],
         "features": [],
         "tech": ["Figma", "Python", "Ionic"],
-        "category": "app"
+        "category": "App"
     },
     {
         "datetime": "2020-01-01",
         "title": "TheUnderGround",
         "shorttitle": "theunderground",
         "images": ["/project-images/theunderground/1.jpg", "/project-images/theunderground/2.jpg", "/project-images/theunderground/3.jpg"],
-        "description": "When WhatsApp changed their privacy features back in the peak of lockdown I took it personally, I took it upon myself to build an alternative for me and my friends which lead to the development of TheUnderGround, the first cli software of TheGrounds. \nOver time it has developed several features. Initially it was a very basic software, with hit enter to update messages and http get based messaging, but later I hosted a python server in my raspberry pi 4 and using TCP sockets achieved real time messaging additionally, using a multithreading approach I was able to achieve a CLI curses style input so messages can be printed at the same time as input was entered. \nTheUnderGround gave me a much deeper understanding of messaging, data encryption, and account management.",
+        "description": "When WhatsApp changed their privacy features back in the peak of lockdown I took it personally, I took it upon myself to build an alternative for me and my friends which lead to the development of TheUnderGround, the first CLI software of TheGrounds. \nOver time it has developed several features. Initially it was a very basic software, with hit enter to update messages and http get based messaging, but later I hosted a python server in my raspberry pi 4 and using TCP sockets achieved real time messaging additionally, using a multithreading Approach I was able to achieve a CLI curses style input so messages can be printed at the same time as input was entered. \nTheUnderGround gave me a much deeper understanding of messaging, data encryption, and account management.",
         "url": "https://thegrounds.pythonanywhere.com/theunderground",
         "code_url": null,
         "links": [],
         "features": ["Real-time messaging", "Can send text, images, and audio", "Fun features such as funky, self-deleting, autocorrected messages, dad jokes etc", "Settings bar with several options: skins, message updates, initialisation settings etc", "Full Privacy!"],
         "tech": ["Python", "Flask", "MySQL", "Raspberry Pi"],
-        "category": "cli"
+        "category": "CLI"
     },
     {
         "datetime": "2020-02-01",
@@ -204,9 +204,9 @@ export const projects = [
         "url": "https://thegrounds.pythonanywhere.com/theaboveground",
         "code_url": null,
         "links": [],
-        "features": ["Real-time voice calls with several people", "Fully encrypted data over a UDP socket", "Very Lightweight yet still performs the same as other voice chatting software such as zoom/google meet"],
+        "features": ["Real-time voice calls with several people", "Fully encrypted data over a UDP socket", "Very Lightweight yet still performs the same as Other voice chatting software such as zoom/google meet"],
         "tech": ["Python", "Raspberry Pi"],
-        "category": "cli"
+        "category": "CLI"
     },
     {
         "datetime": "2020-03-01",
@@ -219,7 +219,7 @@ export const projects = [
         "links": [],
         "features": ["Search by Song, Artists, and Lyrics", "Custom Playlists based on your listening preferences", "Songs can be downloaded for offline mode", "Podcasts are available", "Web Radio stations are available from 100+ countries", "Shazam API allows for song recognition", "User Playlists can be shared", "Also has strong error handling and an error logger to catch the inevitable bugs for later debugging."],
         "tech": ["Python", "VLC", "FFmpeg", "Flask", "MySQL"],
-        "category": "cli"
+        "category": "CLI"
     },
     {
         "datetime": "2023-06-01",
@@ -232,7 +232,7 @@ export const projects = [
         "links": [],
         "features": [],
         "tech": ["Java", "Java Swing"],
-        "category": "gui"
+        "category": "GUI"
     },
     {
         "datetime": "2021-06-01",
@@ -245,7 +245,7 @@ export const projects = [
         "links": [],
         "features": [],
         "tech": ["Python", "Tkinter"],
-        "category": "gui"
+        "category": "GUI"
     },
     {
         "datetime": "2020-06-01",
@@ -258,7 +258,7 @@ export const projects = [
         "links": [],
         "features": [],
         "tech": ["Python", "Tkinter"],
-        "category": "gui"
+        "category": "GUI"
     },
     {
         "datetime": "2020-08-01",
@@ -271,7 +271,7 @@ export const projects = [
         "links": ["https://drive.google.com/file/d/1a_2T5aAfdFM6rzfHIdzLDwcqpsLLa7OX/view?usp=sharing"],
         "features": [],
         "tech": ["Python", "Tkinter"],
-        "category": "gui"
+        "category": "GUI"
     },
     {
         "datetime": "2021-04-01",
@@ -282,9 +282,9 @@ export const projects = [
         "url": null,
         "code_url": null,
         "links": [],
-        "features": ["Automatically calculates the ending date of the contract", "User can view any existing contracts as a pdf or a word file", "Photo scan feature allows the user to send a screenshot of the tenants aadhar/other and the bot extracts the information"],
+        "features": ["Automatically calculates the ending date of the contract", "User can view any existing contracts as a pdf or a word file", "Photo scan feature allows the user to send a screenshot of the tenants aadhar/Other and the bot extracts the information"],
         "tech": ["Python", "Raspberry Pi", "Chatbot"],
-        "category": "other"
+        "category": "Other"
     },
     {
         "datetime": "2021-04-01",
@@ -297,6 +297,6 @@ export const projects = [
         "links": [],
         "features": [],
         "tech": ["Python", "Raspberry Pi", "Chatbot"],
-        "category": "other"
+        "category": "Other"
     },
 ]
