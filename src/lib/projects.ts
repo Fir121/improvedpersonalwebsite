@@ -12,7 +12,111 @@ export type ProjectType = {
     category: string;
 }
 
-export const projects: ProjectType[] = [
+export var projects: ProjectType[] = [
+    {
+        "datetime": "2023-10-01",
+        "title": "Arabic to Emirati Sign Language",
+        "shorttitle": "esl",
+        "images": ["/project-images/esl/1.jpg", "/project-images/esl/2.jpg"],
+        "description": "Emirati Sign Language (ESL) is a visual language used by hard of hearing Emiratis to communicate. It is produced by body, face, and gestures of the hands. Akin to spoken languages, each country has its own sign language that the hard of hearing use. Building a translation system that can generate real-time signing avatar is extremely helpful to build accessible spaces. This system is a first of its kind AI based generative translation system from Arabic text to Emirati sign language. In this paper, we present a first version of our generative translation system, it uses LLMs, tokenization and embeddings to extract the morphological properties of each word of the input sentence and convert it into the appropriate ESL sentence. Then it generates a video sequence representing the sentence in Emirati sign language from a curated database of ESL signs. During the translation, if a word in the sentence is a proper noun or does not have a corresponding entry in the database, it will be finger spelled. The efficacy of the solution is measured by calculating the BLEU score across various examples. We have patented this solution and won multiple competitions with the same.",
+        "url": null,
+        "code_url": null,
+        "links": ["https://drive.google.com/file/d/1mBfR3GCZCFYzkVp_u8PIL0aebBgN9av0/view?usp=sharing", "https://docs.google.com/presentation/d/19JviRxtBXDuzy83eqo6Jg1h3t6vWfyJTyq1MBcs6fTI/edit?usp=sharing", "https://drive.google.com/file/d/1-TcI7NGs5RTwfRekuJTmlgmVEaGsRINn/view"],
+        "features": ["Highly accurate translation", "Finger spelling for unknown words", "One of a kind solution for ESL"],
+        "tech": ["Python", "GPT-3.5 API", "Streamlit"],
+        "category": "Website"
+    },
+    {
+        "datetime": "2023-05-01",
+        "title": "BITSA - BITS Assistant",
+        "shorttitle": "bitsa",
+        "images": ["/project-images/bitsa/1.jpg", "/project-images/bitsa/2.jpg"],
+        "description": "*Website not active - API is no longer linked* BITSA is a conversational AI system designed to assist students and faculty at BITS Pilani, Dubai Campus. The chatbot provides information on various topics, including academics, events, and campus facilities. It is built using the Rasa framework and can be accessed through the BPDC website or messaging platforms like Facebook Messenger and WhatsApp. The chatbot is designed to provide quick and accurate responses to user queries, enhancing the overall user experience.",
+        "url": "https://bitsa.pythonanywhere.com/",
+        "code_url": "https://github.com/Fir121/bpdc_gpt_chatbot",
+        "links": ["https://drive.google.com/file/d/1ek0TdOn1kRfJs1AUCM9HtOIpgGzvvx-i/view?usp=drive_link", "https://docs.google.com/presentation/d/1AHBSMXRLRBsRqm58ofQ8cGb0T7wiAbC3SOB19rCeFgU/edit?usp=sharing"],
+        "features": ["Familiar, clean and friendly user interface", "Designed for concurrency", "Highly accurate responses by using strong data storage and retreival methods", "Take user feedback for future manual finetuning"],
+        "tech": ["Python", "GPT-3.5 API", "Flask", "HTML", "CSS", "JavaScript"],
+        "category": "Website"
+    },
+    {
+        "datetime": "2023-10-01",
+        "title": "AluminEye",
+        "shorttitle": "alumineye",
+        "images": ["/project-images/alumineye/1.jpg", "/project-images/alumineye/2.jpg"],
+        "description": "AluminEye is an innovative social media application designed to bring together the alumni of BPDC. Alumni seek to remember and relive their college days and memories yet cannot find any easy or engaging way to do so. Several terabytes of images and data go to waste since no significant insights can be generated. Collecting data about Alumni and Students is a difficult task that requires heavy manual labour. AluminEye solves all these problems by providing a platform for alumni to connect, share memories, and stay updated on the latest news and events at BPDC. The application also uses AI to process images and detect faces, allowing users to seamlessly relive their college days",
+        "url": null,
+        "code_url": "",
+        "links": ["https://drive.google.com/file/d/1983utX0GF_r5Nrmiuugjs9U9i8M5IvMh/view?usp=sharing"],
+        "features": ["Curated User Feed", "Social Interactions - Likes, Comments", "AI Facial Recognition", "User Feedback to finetune the AI model's results", "Fun and engaging Puzzle Game to keep users engaged", "Admin Panel to manage pictures and posts"],
+        "tech": ["Flutter", "Python", "Flask", "Google APIs"],
+        "category": "App"
+    },
+    {
+        "datetime": "2023-12-01",
+        "title": "Ethereum Based Voting",
+        "shorttitle": "ethervoter",
+        "images": ["/project-images/ethervoter/1.jpg"],
+        "description": "A Solidity smart contract that allows for secure and transparent voting on the Ethereum blockchain. The contract is designed to be simple and easy to use, ensuring that votes are recorded accurately and cannot be tampered with. This project demonstrates the potential of blockchain technology to revolutionize voting systems by providing a decentralized and trustless platform for conducting elections. A research paper is attached",
+        "url": null,
+        "code_url": "https://github.com/Fir121/voting-on-the-blockchain",
+        "links": ["https://docs.google.com/document/d/1krPYKRcxFrOlRZppslc9BWK55h_n8Y6v0g9BJbsqERc/edit?usp=sharing"],
+        "features": ["Simple contract", "Secure and simple Voting"],
+        "tech": ["Solidity", "Ethereum"],
+        "category": "Other"
+    },
+    {
+        "datetime": "2024-04-01",
+        "title": "BPDC Map Navigator",
+        "shorttitle": "bpdcnavigator",
+        "images": ["/project-images/bpdcnavigator/1.jpg"],
+        "description": "A simple navigator application to help students and teachers navigate the BPDC campus. The application is built using Streamlit and GeoJSON data to provide an interactive map of the campus. Users can search for buildings, view their location on the map, and get directions to their destination, the directions are generated using the A star algorithm to find the shortest path between two points.",
+        "url": "https://bpdcnavigator.streamlit.app/",
+        "code_url": "https://github.com/Fir121/college-map-navigation-system",
+        "links": [],
+        "features": ["Simple interface", "Easy to adapt to any campus or building"],
+        "tech": ["Python", "Streamlit", "GeoJSON"],
+        "category": "Website"
+    },
+    {
+        "datetime": "2023-07-01",
+        "title": "GradeScale",
+        "shorttitle": "gradescale",
+        "images": ["/project-images/gradescale/1.jpg", "/project-images/gradescale/2.jpg", "/project-images/gradescale/3.jpg"],
+        "description": "Grading essays is a time-consuming task for university professors, often leading to delays in providing feedback to students. Additionally, subjective biases may influence grading consistency. To address these challenges, GradeScale is an automated essay grading system powered by Natural Language Processing (NLP) techniques. This system enables professors to efficiently assess students' essays, provide timely feedback, and identify areas for improvement, ultimately enhancing the grading process and learning outcomes.",
+        "url": null,
+        "code_url": "https://github.com/Fir121/nlp-project",
+        "links": ["https://github.com/Fir121/nlp-project/wiki", "https://drive.google.com/file/d/1BIEH92pJxMITkQg7y5gttf7W6w45ohQk/view?usp=sharing"],
+        "features": ["Verified Student and Teacher Accounts", "Automated Essay Grading", "Detailed Feedback Reports", "Customisable Grading Criteria"],
+        "tech": ["Flask", "Python", "HTML", "CSS", "JavaScript", "NLP"],
+        "category": "Website"
+    },
+    {
+        "datetime": "2023-07-01",
+        "title": "ACM GMeet Recorder Bot",
+        "shorttitle": "acmgmeetrec",
+        "images": ["/project-images/acmgmeetrec/1.jpg"],
+        "description": "This script uses selenium to automate the process of recording Google Meet sessions. It can be used to record lectures, meetings, or any other Google Meet session. The script can be run on a server to record sessions automatically, by simply inviting the relevant account",
+        "url": null,
+        "code_url": null,
+        "links": [],
+        "features": ["Automatic Google Drive video upload", "High quality video recording", "Configured to leave the meet when there are no participants"],
+        "tech": ["Google APIs", "Python", "Linux"],
+        "category": "Other"
+    },
+    {
+        "datetime": "2024-07-01",
+        "title": "ACM Portal",
+        "shorttitle": "acmportal",
+        "images": ["/project-images/acmportal/1.jpg", "/project-images/acmportal/2.jpg", "/project-images/acmportal/3.jpg"],
+        "description": "The ACM Portal is a webApp built for the ACM chapter of BITS Pilani, Dubai Campus. The portal is a one-stop solution for all ACM related activities, including event management, membership management, and a posts forum for the BPDC ACM chapter. The portal is built to be highly configurable, allowing the admin to add, edit and delete events, members, certificates and posts as needed.",
+        "url": "https://portal.acmbpdc.org",
+        "code_url": null,
+        "links": [],
+        "features": ["Clean simple UI", "QR Code verified certificates", "Member Exclusive content", "Separate admin panel with detailed statistics and reports", "Customizable permissions for each user", "Well integrated with Google OAuth to speed up membership applications"],
+        "tech": ["Next.JS", "Python", "Django", "Typescript"],
+        "category": "Website"
+    },
     {
         "datetime": "2023-08-01",
         "title": "CBee.AI",
@@ -23,7 +127,7 @@ export const projects: ProjectType[] = [
         "code_url": null,
         "links": [],
         "features": ["SEO Optimised", "Generative AI used to generate videos", "Highly customisable videos from the designs to the script"],
-        "tech": ["React", "Python", "FastAPI", "GPT-3.5 API", "Azure Cognitive Services", "Azure Speech Services", "AWS S3 API", "Nginx", "Linux"],
+        "tech": ["Next.JS", "Typescript", "Python", "FastAPI", "GPT-3.5 API", "Azure Cognitive Services", "Azure Speech Services", "AWS S3 API", "Nginx", "Linux", "Google APIs"],
         "category": "Website"
     },
     {
@@ -34,13 +138,13 @@ export const projects: ProjectType[] = [
         "description": "This module was built as an improvement to the existing training process for new employees. The module is a chatbot that Guides the user through the training process through a hands on scenario conversation. It utilises the GPT-3.5 API to add highly sophisticated language processing and accurate scoring. The module is built to be highly configurable, allowing the admin to add, edit and delete questions and answers as needed.",
         "url": null,
         "code_url": null,
-        "links": [],
+        "links": ["https://drive.google.com/file/d/1B-ZGhZnbu8_cdMqFM8pd7cv5MIy2-tgy/view?usp=sharing"],
         "features": ["Text to Speech", "Conversational and friendly interface", "Ability to add, edit and delete roleplays", "Completely integrated with existing MCQ infrastructure allowing for ease of adoption"],
         "tech": ["HTML", "CSS", "JavaScript", "Python", "Flask", "GPT-3.5 API", "MySQL"],
         "category": "Website"
     },
     {
-        "datetime": "2022-09-01",
+        "datetime": "2024-01-01",
         "title": "Cleaning Supervision Module",
         "shorttitle": "dm",
         "images": ["/project-images/dm/1.jpg", "/project-images/dm/2.jpg", "/project-images/dm/3.jpg", "/project-images/dm/4.jpg"],
@@ -79,7 +183,7 @@ export const projects: ProjectType[] = [
         "category": "Website"
     },
     {
-        "datetime": "2024-01-01",
+        "datetime": "2022-10-01",
         "title": "Building Checklist Module",
         "shorttitle": "building",
         "images": ["/project-images/building/1.jpg", "/project-images/building/2.jpg", "/project-images/building/3.jpg", "/project-images/building/4.jpg", "/project-images/building/5.jpg"],
@@ -300,3 +404,5 @@ export const projects: ProjectType[] = [
         "category": "Other"
     },
 ]
+
+projects = projects.sort((a, b) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime());

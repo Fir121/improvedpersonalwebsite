@@ -21,7 +21,7 @@ export function MainDisplay(){
             <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-6 p-6 md:p-10">
                 {
                     projectsArr.map((project, index) => (
-                        <DisplayCard project={project} key={index} index={project.shorttitle} selectedId={selectedId} setSelectedId={setSelectedId}/>
+                        <DisplayCard project={project} key={project.shorttitle} index={project.shorttitle} selectedId={selectedId} setSelectedId={setSelectedId}/>
                     ))
                 }
             </div>

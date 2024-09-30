@@ -14,7 +14,7 @@ export function SearchBar({projectsArr, setProjectsArr}: {projectsArr: ProjectTy
 
     useEffect(() => {
         const filteredProjects = projects.filter(project => {
-            if (search !== "" && !project.title.toLowerCase().includes(search.toLowerCase())){return false}
+            if (search !== "" && !project.title.toLowerCase().includes(search.toLowerCase()) && !project.description.toLowerCase().includes(search.toLowerCase())){return false}
             if (selectedCategory !== "" && project.category !== selectedCategory){return false}
             if (selectedTech !== "" && !project.tech.includes(selectedTech)){return false}
             return true

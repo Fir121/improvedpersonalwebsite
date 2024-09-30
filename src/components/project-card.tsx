@@ -13,6 +13,12 @@ function ContentDisplay({project, long} : {project: ProjectType, long: boolean})
                 :
                 <p className="text-3xl pb-4 font-bold text-center">{project.title}</p>
             }
+
+            {
+                long && project.code_url && (
+                    <p className="text-center pb-4"><a href={project.code_url} className="text-link-base hover:text-link-hover" target="_blank">View Code</a></p>
+                )
+            }
         </div>
 
         {long && (
@@ -46,7 +52,7 @@ function ContentDisplay({project, long} : {project: ProjectType, long: boolean})
             </div>
         )}
         
-        <div className="w-100 pb-3">
+        <div className="w-100 pb-5">
             {
                 project.tech.map((tag, index) => (
                     <span key={index} className="bg-background text-white rounded-full px-2 py-1 text-sm mr-2 inline-block my-1">{tag}</span>
@@ -73,7 +79,7 @@ export function DisplayCard({index, project, selectedId, setSelectedId} : {proje
             <button className="w-full block absolute bottom-0 bg-accent left-0 text-background" onClick={() => setSelectedId(index)}>SEE MORE</button>
         </motion.div>
 
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
             {selectedId===index && (
                 <motion.div 
                     className="bg-[rgba(0,0,0,0.7)] fixed top-0 left-0 w-full h-full z-40 flex flex-col justify-center items-center py-10"
