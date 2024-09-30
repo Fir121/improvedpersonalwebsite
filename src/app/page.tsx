@@ -15,6 +15,11 @@ export default function Home() {
           <BackgroundSlider time={65} cname="p-1 md:p-5"/>
         </div>
 
+        <div className="block md:hidden">
+          <div className="stars"></div>
+          <div className="twinkling"></div>
+        </div>
+
         <div className="mt-5 md:mt-0 absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-background-trans to-60% p-5 md:p-10 justify-center align-middle flex flex-col gap-7 text-center pointer-events-none">
           <MainHeader/>
         </div>
