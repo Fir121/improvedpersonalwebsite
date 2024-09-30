@@ -2,6 +2,7 @@ import * as motion from "framer-motion/client";
 import { PreviewCard } from "./project-small-card";
 import { projects } from "@/lib/projects";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 function shuffle(array: unknown[]) {
     let currentIndex = array.length;
@@ -42,7 +43,7 @@ export function BackgroundSlider({time, cname}: {time: number, cname?:string}) {
                         boxShadow: "0px 0px 10px 5px var(--dark-accent)"
                     }}
                 >
-                    <PreviewCard title={x.title} image={x.images[0]}/>
+                    <Link href={"/projects#"+x.shorttitle}><PreviewCard title={x.title} image={x.images[0]}/></Link>
                 </motion.div>
             ))}
         </div>

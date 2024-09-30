@@ -2,6 +2,7 @@ import { ProjectType } from "@/lib/projects"
 import * as motion from "framer-motion/client";
 import { EmblaCarousel } from "./carousel";
 import { AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 function ContentDisplay({project, long} : {project: ProjectType, long: boolean}) {
     return (
@@ -9,14 +10,14 @@ function ContentDisplay({project, long} : {project: ProjectType, long: boolean})
         <EmblaCarousel images={project.images} title={project.title}/>
         <div>
             {
-                (long && project.url) ? <p className="text-3xl pb-4 font-bold text-center underline text-link-base hover:text-link-hover"><a href={project.url} target="_blank">{project.title}</a></p>
+                (long && project.url) ? <p className="text-3xl pb-4 font-bold text-center underline text-link-base hover:text-link-hover"><Link href={project.url} target="_blank">{project.title}</Link></p>
                 :
                 <p className="text-3xl pb-4 font-bold text-center">{project.title}</p>
             }
 
             {
                 long && project.code_url && (
-                    <p className="text-center pb-4"><a href={project.code_url} className="text-link-base hover:text-link-hover" target="_blank">View Code</a></p>
+                    <p className="text-center pb-4"><Link href={project.code_url} className="text-link-base hover:text-link-hover" target="_blank">View Code</Link></p>
                 )
             }
         </div>
@@ -43,7 +44,7 @@ function ContentDisplay({project, long} : {project: ProjectType, long: boolean})
                         <ul className="pl-4">
                         {
                             project.links.map((link, index) => (
-                                <li key={index} className="list-disc"><a href={link} className="text-link-base hover:text-link-hover" target="_blank">{link}</a></li>
+                                <li key={index} className="list-disc"><Link href={link} className="text-link-base hover:text-link-hover" target="_blank">{link}</Link></li>
                             ))
                         }
                         </ul>
@@ -87,7 +88,7 @@ export function DisplayCard({index, project, selectedId, setSelectedId} : {proje
                 >
                     <motion.div 
                         layoutId={selectedId.toString()}
-                        className="bg-foreground rounded-lg p-5 text-background relative overflow-y-scroll w-11/12 lg:w-6/12"
+                        className="bg-foreground rounded-lg p-5 text-background relative overflow-y-scroll w-11/12 lg:w-6/12 overflow-x-hidden"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <ContentDisplay project={project} long={true}/>
