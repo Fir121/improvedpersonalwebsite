@@ -31,7 +31,7 @@ export const projects: ProjectType[] = [
         "title": "Employee Conversational Training Module",
         "shorttitle": "traj",
         "images": ["/project-images/traj/1.jpg", "/project-images/traj/2.jpg"],
-        "description": "This module was built as an improvement to the existing training process for new employees. The module is a chatbot that GUIdes the user through the training process through a hands on scenario conversation. It utilises the GPT-3.5 API to add highly sophisticated language processing and accurate scoring. The module is built to be highly configurable, allowing the admin to add, edit and delete questions and answers as needed.",
+        "description": "This module was built as an improvement to the existing training process for new employees. The module is a chatbot that Guides the user through the training process through a hands on scenario conversation. It utilises the GPT-3.5 API to add highly sophisticated language processing and accurate scoring. The module is built to be highly configurable, allowing the admin to add, edit and delete questions and answers as needed.",
         "url": null,
         "code_url": null,
         "links": [],

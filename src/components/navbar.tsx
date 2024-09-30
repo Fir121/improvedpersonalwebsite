@@ -12,12 +12,12 @@ export function DynamicNav({home}:{home: boolean}){
 
     return (
         <div className="fixed w-screen left-0 z-10 bottom-[5%]">
-            <div className="absolute left-0 w-screen bottom-[5%]">
+            <div className="absolute left-0 w-screen bottom-[5%] pointer-events-none">
                 <motion.div
                     layout
                     onClick={() => setOpen(!open)}
                     onKeyPress={(e) => {if(e.key === "Enter") setOpen(!open)}}
-                    className="item z-20 relative bg-dark-accent rounded-full w-16 h-16 p-10 mx-auto flex justify-center items-center align-middle cursor-pointer"
+                    className="item z-20 relative bg-dark-accent rounded-full w-16 h-16 p-10 mx-auto flex justify-center items-center align-middle cursor-pointer pointer-events-auto"
                     onAnimationComplete={() => setOpen(true)}
                     initial= {{ y: 40, opacity: 0 }}
                     animate= {{
@@ -34,10 +34,10 @@ export function DynamicNav({home}:{home: boolean}){
                     <motion.div layout className="bg-accent w-10 h-10 p-5 z-20 rounded-full pointer-events-none"/>
                 </motion.div>            
             </div>
-            <div className="absolute left-0 z-10 w-screen bottom-[5%]">
+            <div className="absolute left-0 z-10 w-screen bottom-[5%] pointer-events-none">
                 <motion.div
                     layout
-                    className="relative bg-dark-accent h-16 mx-auto w-11/12 md:w-8/12 rounded-2xl max-w-4xl"
+                    className="relative bg-dark-accent h-16 mx-auto w-11/12 md:w-8/12 rounded-2xl max-w-4xl pointer-events-auto"
                     initial={{ scaleX: 0, display: "none" }}
                     animate={{ scaleX: open ? 1 : 0, display: open ? "block" : "none" }}
                     transition={{ 

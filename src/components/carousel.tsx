@@ -31,7 +31,8 @@ export function EmblaCarousel({images, title}: {images: string[], title: string}
                     ))}
             </div>
             
-            <div className="embla__controls">
+            <div className='grid text-center mb-3 font-light text-sm md:hidden'>{"<< swipe for more >>"}</div>
+            <div className="embla__controls md:grid hidden">
                 <div className="embla__buttons">
                 <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
                 <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />

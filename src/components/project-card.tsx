@@ -9,7 +9,7 @@ function ContentDisplay({project, long} : {project: ProjectType, long: boolean})
         <EmblaCarousel images={project.images} title={project.title}/>
         <div>
             {
-                (long && project.url) ? <p className="text-3xl pb-4 font-bold text-center underline text-cyan-900"><a href={project.url} target="_blank">{project.title}</a></p>
+                (long && project.url) ? <p className="text-3xl pb-4 font-bold text-center underline text-link-base hover:text-link-hover"><a href={project.url} target="_blank">{project.title}</a></p>
                 :
                 <p className="text-3xl pb-4 font-bold text-center">{project.title}</p>
             }
@@ -37,7 +37,7 @@ function ContentDisplay({project, long} : {project: ProjectType, long: boolean})
                         <ul className="pl-4">
                         {
                             project.links.map((link, index) => (
-                                <li key={index} className="list-disc"><a href={link} className="text-slate-500 hover:text-slate-600" target="_blank">{link}</a></li>
+                                <li key={index} className="list-disc"><a href={link} className="text-link-base hover:text-link-hover" target="_blank">{link}</a></li>
                             ))
                         }
                         </ul>
@@ -45,11 +45,11 @@ function ContentDisplay({project, long} : {project: ProjectType, long: boolean})
                 )}
             </div>
         )}
-
+        
         <div className="w-100 pb-3">
             {
                 project.tech.map((tag, index) => (
-                    <span key={index} className="bg-slate-500 text-white rounded-full px-2 py-1 text-sm mr-2 inline-block my-1">{tag}</span>
+                    <span key={index} className="bg-background text-white rounded-full px-2 py-1 text-sm mr-2 inline-block my-1">{tag}</span>
                 ))
             }
         </div>
@@ -64,13 +64,13 @@ export function DisplayCard({index, project, selectedId, setSelectedId} : {proje
     return (
     <>
         <motion.div
-            className="col-span-1 h-100 bg-slate-400 rounded-lg p-5 text-black relative overflow-hidden"
+            className="col-span-1 h-100 bg-foreground rounded-lg p-5 text-background relative overflow-hidden"
             layoutId={index.toString()} 
             
         >
             <ContentDisplay project={project} long={false}/>
 
-            <button className="w-full block absolute bottom-0 bg-slate-500 left-0" onClick={() => setSelectedId(index)}>SEE MORE</button>
+            <button className="w-full block absolute bottom-0 bg-accent left-0 text-background" onClick={() => setSelectedId(index)}>SEE MORE</button>
         </motion.div>
 
         <AnimatePresence>
@@ -81,11 +81,12 @@ export function DisplayCard({index, project, selectedId, setSelectedId} : {proje
                 >
                     <motion.div 
                         layoutId={selectedId.toString()}
-                        className="bg-slate-400 rounded-lg p-5 text-black relative overflow-y-scroll w-11/12 lg:w-6/12"
+                        className="bg-foreground rounded-lg p-5 text-background relative overflow-y-scroll w-11/12 lg:w-6/12"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <ContentDisplay project={project} long={true}/>
 
+                        <button className="w-8 aspect-square p-1 rounded-[50%] absolute top-3 bg-red-600 right-3 text-foreground font-bold" onClick={() => setSelectedId(null)}>X</button>
                     </motion.div>
                 </motion.div>
             )}

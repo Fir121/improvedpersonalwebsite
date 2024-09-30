@@ -13,7 +13,8 @@ const config: Config = {
         foreground: "var(--foreground)",
         "light-black": "var(--light-black)",
         accent: "var(--accent)",
-        "light-accent": "var(--light-accent)",
+        "link-base": "var(--link-base)",
+        "link-hover": "var(--link-hover)",
         "dark-accent": "var(--dark-accent)",
         "background-trans": "var(--background-trans)"
       },
