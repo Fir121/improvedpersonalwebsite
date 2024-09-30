@@ -1,3 +1,4 @@
+import { MainDisplay } from "@/components/display-projects";
 import { DynamicNav } from "@/components/navbar";
 
 export default function ProjectPage(){
@@ -5,9 +6,7 @@ export default function ProjectPage(){
         <div>
             <DynamicNav home={false}/>
 
-            <div className="relative min-h-screen">
-                TEST
-            </div>
+            <MainDisplay/>
         </div>
     );
 }

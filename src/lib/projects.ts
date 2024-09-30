@@ -1,3 +1,17 @@
+export type ProjectType = {
+    datetime: string;
+    title: string;
+    shorttitle: string;
+    images: string[];
+    description: string;
+    url: string | null;
+    code_url: string | null;
+    links: string[];
+    features: string[];
+    tech: string[];
+    category: string;
+}
+
 export const projects = [
     {
         "datetime": "2023-08-01",
