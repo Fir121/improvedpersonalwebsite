@@ -12,7 +12,7 @@ export type ProjectType = {
     category: string;
 }
 
-export var projects: ProjectType[] = [
+export const projects: ProjectType[] = [
     {
         "datetime": "2023-10-01",
         "title": "Arabic to Emirati Sign Language",
@@ -403,6 +403,4 @@ export var projects: ProjectType[] = [
         "tech": ["Python", "Raspberry Pi", "Chatbot"],
         "category": "Other"
     },
-]
-
-projects = projects.sort((a, b) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime());
+].sort((a, b) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime())
