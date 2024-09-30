@@ -5,6 +5,7 @@ import Image from "next/image";
 import { NextButton, PrevButton, usePrevNextButtons } from './carouselarrow';
 import { DotButton, useDotButton } from './carouseldot';
 import { cn } from '@/lib/utils';
+import { bDataURL } from '@/lib/projects';
 
 export function EmblaCarousel({images, title}: {images: string[], title: string}) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -27,7 +28,7 @@ export function EmblaCarousel({images, title}: {images: string[], title: string}
             <div className="embla__container w-100 aspect-video">
                     {images.map((image, index) => (
                         <div className="embla__slide" key={index}>
-                            <Image src={image} alt={title} fill={true} />
+                            <Image placeholder='blur' blurDataURL={bDataURL} src={image} alt={title} fill={true} />
                         </div>
                     ))}
             </div>
