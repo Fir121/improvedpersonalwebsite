@@ -9,10 +9,10 @@ export default function Home() {
 
       <div className="relative min-h-screen">
         <div className="opacity-50 hidden md:block">
+          <BackgroundSlider time={105} cname="p-1 md:p-5"/>
           <BackgroundSlider time={95} cname="p-1 md:p-5"/>
           <BackgroundSlider time={85} cname="p-1 md:p-5"/>
           <BackgroundSlider time={75} cname="p-1 md:p-5"/>
-          <BackgroundSlider time={65} cname="p-1 md:p-5"/>
         </div>
 
         <div className="block md:hidden">
