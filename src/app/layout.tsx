@@ -9,8 +9,12 @@ export const metadata: Metadata = {
     title: "Mohamed Firas Adil",
     description: "Personal Portfolio Website by Mohamed Firas Adil, an astute Computer Science student with a zeal for learning.",
     images: "/icon.png",
-    url: "https://www.firasadil.com",
-  }  
+    url: "https://firasadil.com",
+  },
+  metadataBase: new URL("https://firasadil.com"),
+  alternates: {
+    canonical: './',
+  },  
 };
 
 export default function RootLayout({
