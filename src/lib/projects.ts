@@ -162,7 +162,7 @@ export const projects: ProjectType[] = [
         "shorttitle": "pfm-homepage",
         "images": ["/project-images/homepage/1.jpg", "/project-images/homepage/2.jpg", "/project-images/homepage/3.jpg"],
         "description": "This site was built for a new emerging FM company, the site quickly took first ranking in a google search for the terms \"Prime FM UAE\" and \"Prime FM\" due to excellent SEO optimisation. The site also features an Admin panel where the site owner can add his own updates to the site.",
-        "url": "https://www.primefm-me.com",
+        "url": "https://archive.primefm-me.com",
         "code_url": null,
         "links": [],
         "features": ["SEO Optimised", "Google Captcha for forms", "Admin Panel"],
