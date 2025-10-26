@@ -119,6 +119,45 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
+  --highlight-left: 0;
+  --highlight-width: 0;
+}
+
+.menu-parent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--highlight-left);
+  width: var(--highlight-width);
+  height: 100%;
+  border-radius: 0.75rem; /* 12px */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 10px 5px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 30; /* Below menu-item's z-index */
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+
+  /* prepare for scale animation */
+  transform-origin: center;
+  transform: scale(1);
+}
+
+/* keyframes: pop to 1.1 then settle back to 1 over 1s */
+@keyframes menu-pop {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+/* apply the pop animation to the highlight and the item on hover,
+   so hovering triggers a quick scale-up then settles back to scale(1) after 1s */
+.menu-parent:has(.menu-item:hover)::before {
+  animation: menu-pop 1s forwards;
 }
 
 .menu-break{
@@ -136,12 +175,30 @@ body {
   padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 40;
-  transition: 0.6s;
+  transition: all 0.2s ease-in-out;
   text-align: center;
 }
 
-.menu-item:hover{
-  background: #333e80;
+.menu-item:hover {
+  transform: scale(1.1);
+}
+
+/*
+  IMPORTANT: You need to add these classes to your menu items in your HTML.
+  Adjust the values based on the number and position of your items.
+  This example assumes 4 items, each taking up 25% of the parent width.
+  We now also control opacity here.
+*/
+.menu-parent:has(.item-1:hover) { --highlight-left: 0%; --highlight-width: 20%; opacity: 1; }
+.menu-parent:has(.item-2:hover) { --highlight-left: 20%; --highlight-width: 20%; opacity: 1; }
+.menu-parent:has(.item-3:hover) { --highlight-left: 60%; --highlight-width: 20%; opacity: 1; }
+.menu-parent:has(.item-4:hover) { --highlight-left: 80%; --highlight-width: 20%; opacity: 1; }
+
+.menu-parent:has(.item-1:hover)::before,
+.menu-parent:has(.item-2:hover)::before,
+.menu-parent:has(.item-3:hover)::before,
+.menu-parent:has(.item-4:hover)::before {
+  opacity: 1;
 }
 
 .menu-item p{
