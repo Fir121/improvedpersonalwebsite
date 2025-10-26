@@ -3,11 +3,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Mohamed Firas Adil",
-  description: "Personal Portfolio Website by Mohamed Firas Adil, an astute Computer Science student with a zeal for learning.",
+  description: "Personal Portfolio Website by Mohamed Firas Adil, computer science engineer with a zeal for learning, exploring, and creating.",
   keywords: "Mohamed Firas Adil,Firas Adil,Mohamed Firas,Firas,Personal Portfolio,Portfolio,technology,software,cli,gui,websites,apps,python",
   openGraph: {
     title: "Mohamed Firas Adil",
-    description: "Personal Portfolio Website by Mohamed Firas Adil, an astute Computer Science student with a zeal for learning.",
+    description: "Personal Portfolio Website by Mohamed Firas Adil, computer science engineer with a zeal for learning, exploring, and creating.",
     images: "/icon.png",
     url: "https://firasadil.com",
   },
