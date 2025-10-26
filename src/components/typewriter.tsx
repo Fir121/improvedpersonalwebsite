@@ -9,10 +9,11 @@ interface IRedoAnimTextProps {
 function RedoAnimText({ delay }: IRedoAnimTextProps) {
   const textIndex = useMotionValue(0);
   const texts = [
-    "a programmer.",
-    "a web developer.",
+    "a software developer.",
     "a designer.",
     "an innovator.",
+    "a problem solver.",
+    "never gonna give you up, never gonna let you down!",
     "a COMPUTER SCIENTIST!"
   ];
 

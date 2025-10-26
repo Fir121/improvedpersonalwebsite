@@ -1,5 +1,7 @@
+"use client";
 import { AnimText } from "@/components/typewriter";
 import * as motion from "framer-motion/client";
+import BlurText from "./BlurText";
 
 export function MainHeader() {
         return (
@@ -14,8 +16,18 @@ export function MainHeader() {
                         ease: "linear",
                     } }}
                 >
-                        <h1 className="text-6xl font-bold">Hello, {"I'm"} <b>Firas</b>!</h1>
-                        <AnimText delay={1} />
+                        {/* <h1 className="text-6xl font-bold">Hello, {"I am"} <b>Firas</b>!</h1> */}
+                        <h1 className="text-sm font-semibold tracking-widest">MY PORTFOLIO</h1>
+                        <h2>
+                                <BlurText
+                                        text="Hello, I am Firas!"
+                                        delay={150}
+                                        animateBy="words"
+                                        direction="top"
+                                        className="text-7xl font-bold"
+                                />
+                        </h2>
+                        <AnimText delay={1.5} />
                 </motion.div>
         );
 }
