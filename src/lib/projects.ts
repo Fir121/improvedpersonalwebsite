@@ -23,7 +23,7 @@ export const projects: ProjectType[] = [
         "code_url": null,
         "links": ["https://drive.google.com/file/d/1mBfR3GCZCFYzkVp_u8PIL0aebBgN9av0/view?usp=sharing", "https://docs.google.com/presentation/d/19JviRxtBXDuzy83eqo6Jg1h3t6vWfyJTyq1MBcs6fTI/edit?usp=sharing", "https://drive.google.com/file/d/1-TcI7NGs5RTwfRekuJTmlgmVEaGsRINn/view"],
         "features": ["Highly accurate translation", "Finger spelling for unknown words", "One of a kind solution for ESL"],
-        "tech": ["Python", "GPT-3.5 API", "Streamlit"],
+        "tech": ["Python", "OpenAI API", "Streamlit"],
         "category": "Website"
     },
     {
@@ -36,7 +36,7 @@ export const projects: ProjectType[] = [
         "code_url": "https://github.com/Fir121/bpdc_gpt_chatbot",
         "links": ["https://drive.google.com/file/d/1ek0TdOn1kRfJs1AUCM9HtOIpgGzvvx-i/view?usp=drive_link", "https://docs.google.com/presentation/d/1AHBSMXRLRBsRqm58ofQ8cGb0T7wiAbC3SOB19rCeFgU/edit?usp=sharing"],
         "features": ["Familiar, clean and friendly user interface", "Designed for concurrency", "Highly accurate responses by using strong data storage and retreival methods", "Take user feedback for future manual finetuning"],
-        "tech": ["Python", "GPT-3.5 API", "Flask", "HTML", "CSS", "JavaScript"],
+        "tech": ["Python", "OpenAI API", "Flask", "HTML", "CSS", "JavaScript"],
         "category": "Website"
     },
     {
@@ -127,7 +127,7 @@ export const projects: ProjectType[] = [
         "code_url": null,
         "links": [],
         "features": ["SEO Optimised", "Generative AI used to generate videos", "Highly customisable videos from the designs to the script"],
-        "tech": ["Next.JS", "Typescript", "Python", "FastAPI", "GPT-3.5 API", "Azure Cognitive Services", "Azure Speech Services", "AWS S3 API", "Nginx", "Linux", "Google APIs"],
+        "tech": ["Next.JS", "Typescript", "Python", "FastAPI", "OpenAI API", "Azure Cognitive Services", "Azure Speech Services", "AWS S3 API", "Nginx", "Linux", "Google APIs"],
         "category": "Website"
     },
     {
@@ -140,7 +140,7 @@ export const projects: ProjectType[] = [
         "code_url": null,
         "links": ["https://drive.google.com/file/d/1B-ZGhZnbu8_cdMqFM8pd7cv5MIy2-tgy/view?usp=sharing"],
         "features": ["Text to Speech", "Conversational and friendly interface", "Ability to add, edit and delete roleplays", "Completely integrated with existing MCQ infrastructure allowing for ease of adoption"],
-        "tech": ["HTML", "CSS", "JavaScript", "Python", "Flask", "GPT-3.5 API", "MySQL"],
+        "tech": ["HTML", "CSS", "JavaScript", "Python", "Flask", "OpenAI API", "MySQL"],
         "category": "Website"
     },
     {

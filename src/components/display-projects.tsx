@@ -28,12 +28,13 @@ export function MainDisplay(){
 
     return (
         <div className="relative min-h-screen">
-            <div className="p-6 md:p-10 pb-0">
+            <div className="p-6 pb-0">
                 <h1 className="text-4xl font-bold w-100 text-center">MY WORK</h1>
 
-                <p className="text-center md:block hidden">{"Here are some of the projects I've worked on over the years. Click on 'see more' to learn more!"}</p>
+                <p className="text-center md:block hidden mb-4">{"Here are some of the projects I've worked on over the years."}
+                    <br/><em>{"Note: Some links may be outdated."}</em></p>
 
-                <SearchBar projectsArr={projectsArr} setProjectsArr={setProjectsArr}/>
+                <SearchBar setProjectsArr={setProjectsArr}/>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 auto-rows-auto gap-6 p-6 md:p-10">

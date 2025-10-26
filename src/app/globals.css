@@ -97,8 +97,8 @@
   --background: #19181A;
   --light-black: #3c3c3c;
   --foreground: #eaeaea;
-  --accent: #f8a13f;
-  --dark-accent: #24305E;
+  --accent: #a7ef9e;
+  --dark-accent: #063c00;
   --link-base: #3d4e92;
   --link-hover: #24305E;
   --background-trans: rgba(7, 7, 7, 0.99);
@@ -150,7 +150,7 @@ body {
 /* keyframes: pop to 1.1 then settle back to 1 over 1s */
 @keyframes menu-pop {
   0%   { transform: scale(1); }
-  30%  { transform: scale(1.25); }
+  30%  { transform: scale(1.2); }
   100% { transform: scale(1); }
 }
 
@@ -318,67 +318,4 @@ body {
 }
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.1rem var(--accent);
-}
-
-
-@keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-
-@keyframes move-clouds-back {
-  from {background-position:0 0;}
-  to {background-position:10000px 0;}
-}
-@-webkit-keyframes move-clouds-back {
-  from {background-position:0 0;}
-  to {background-position:10000px 0;}
-}
-@-moz-keyframes move-clouds-back {
-  from {background-position:0 0;}
-  to {background-position:10000px 0;}
-}
-@-ms-keyframes move-clouds-back {
-  from {background-position: 0;}
-  to {background-position:10000px 0;}
-}
-
-.stars, .twinkling, .clouds {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
-  z-index: 0;
-}
-
-.stars {
-  background:#000 url("/stars.png") repeat top center;
-  z-index:-1;
-}
-
-.twinkling{
-  background:transparent url("/twinkling.png") repeat top center;
-  z-index:0;
-
-  -moz-animation:move-twink-back 200s linear infinite;
-  -ms-animation:move-twink-back 200s linear infinite;
-  -o-animation:move-twink-back 200s linear infinite;
-  -webkit-animation:move-twink-back 200s linear infinite;
-  animation:move-twink-back 200s linear infinite;
 }

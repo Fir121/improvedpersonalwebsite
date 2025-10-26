@@ -77,7 +77,7 @@ export function DisplayCard({index, project, selectedId, setSelectedId} : {proje
         >
             <ContentDisplay project={project} long={false}/>
 
-            <button className="w-full block absolute bottom-0 bg-accent left-0 text-background" onClick={() => setSelectedId(index)}>SEE MORE</button>
+            <button className="w-full block absolute bottom-0 bg-accent left-0 text-background font-bold" onClick={() => setSelectedId(index)}>SEE MORE</button>
         </motion.div>
 
         <AnimatePresence initial={false}>
