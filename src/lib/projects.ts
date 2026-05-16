@@ -14,6 +14,19 @@ export type ProjectType = {
 
 export const projects: ProjectType[] = [
     {
+        "datetime": "2026-02-21",
+        "title": "LLM Classifier",
+        "shorttitle": "llmclassifier",
+        "images": ["/project-images/llmclassifier/1.jpg"],
+        "description": "Structured LLM based classification, clustering and extraction framework that works with all major API providers. It returns validated Pydantic models instead of free-form text, supports few-shot examples, consensus voting, batch predictions with resumable cache, and multithreading to speed up large data processing. It also supports automated clustering (LLMCluster) for identifying topics among massive datasets.",
+        "url": "https://pypi.org/project/llm-classifier/",
+        "code_url": "https://github.com/Fir121/llm-classifier",
+        "links": [],
+        "features": ["Returns validated Pydantic models", "Adds few-shot examples in each call", "Optional collection of reasoning and confidence", "Reduces variance with consensus voting", "Resumable batch prediction caching", "Multithreading support", "Bulk clustering using LLMCluster"],
+        "tech": ["Python",  "Generative AI", "LLMs", "pip"],
+        "category": "Package"
+    },
+    {
         "datetime": "2023-10-01",
         "title": "Arabic to Emirati Sign Language",
         "shorttitle": "esl",
