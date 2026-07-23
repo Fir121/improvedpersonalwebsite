@@ -36,7 +36,7 @@ export function BackgroundSlider({time, cname}: {time: number, cname?:string}) {
                         repeat: Infinity,
                         repeatType: "reverse",
                         duration: time,
-                        ease: "linear",
+                        ease: "linear" as const,
                     } }}
                     whileHover={{ 
                         scale: 1.05,

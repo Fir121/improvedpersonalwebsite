@@ -27,15 +27,15 @@ function ContentDisplay({project, long} : {project: ProjectType, long: boolean})
                 <p className="pb-1">{project.description}</p>
 
                 {project.features && project.features.length > 0 && (
-                        <p>
-                            <ul className="pl-4">
-                            {
-                                project.features.map((feature, index) => (
-                                    <li key={index} className="list-disc">{feature}</li>
-                                ))
-                            }
-                            </ul>
-                        </p>
+                    <div>
+                        <ul className="pl-4">
+                        {
+                            project.features.map((feature, index) => (
+                                <li key={index} className="list-disc">{feature}</li>
+                            ))
+                        }
+                        </ul>
+                    </div>
                 )}
 
                 {project.links && project.links.length > 0 && (

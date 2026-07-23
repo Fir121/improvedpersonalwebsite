@@ -30,7 +30,7 @@ function RedoAnimText({ delay }: IRedoAnimTextProps) {
       type: "tween",
       delay: delay,
       duration: 1,
-      ease: "easeIn",
+      ease: "easeIn" as const,
       repeat: Infinity,
       repeatType: "reverse",
       repeatDelay: 1,
@@ -59,7 +59,7 @@ const cursorVariants = {
       duration: 1,
       repeat: Infinity,
       repeatDelay: 0,
-      ease: "linear",
+      ease: "linear" as const,
       times: [0, 0.5, 0.5, 1]
     }
   }
@@ -93,7 +93,7 @@ export function AnimText({ delay }: IAnimTextProps) {
       type: "tween",
       delay: delay,
       duration: 1,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     });
     return controls.stop;
   }, []);

@@ -13,7 +13,7 @@ export function MainHeader() {
                         repeat: Infinity,
                         repeatType: "reverse",
                         duration: 8,
-                        ease: "linear",
+                        ease: "linear" as const,
                     }}
                 >
                         {/* <h1 className="text-6xl font-bold">Hello, {"I am"} <b>Firas</b>!</h1> */}
