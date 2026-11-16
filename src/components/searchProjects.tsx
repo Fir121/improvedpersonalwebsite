@@ -6,11 +6,14 @@ export function SearchBar({setProjectsArr}: {setProjectsArr: (projects: ProjectT
     const [search, setSearch] = useState<string>("");
 
     useEffect(() => {
+        const query = search.toLowerCase();
         const filteredProjects = projects.filter(project => {
-            if (search !== "" && !project.title.toLowerCase().includes(search.toLowerCase()) && !project.description.toLowerCase().includes(search.toLowerCase()) && !project.tech.some(tech => tech.toLowerCase().includes(search.toLowerCase())) && !(project.shorttitle.toLowerCase().includes(search.toLowerCase())) && !(project.category.toLowerCase().includes(search.toLowerCase()))) {
-                return false
-            }
-            return true
+            const fields = [
+                project.title, project.description, project.shorttitle, project.category,
+                ...project.tech, ...project.features,
+                ...(project.featureGroups ?? []).flatMap(group => [group.title, ...group.features]),
+            ];
+            return fields.some(field => field.toLowerCase().includes(query));
         })
         setProjectsArr(filteredProjects)
     }, [search, setProjectsArr]);

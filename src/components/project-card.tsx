@@ -26,7 +26,20 @@ function ContentDisplay({project, long} : {project: ProjectType, long: boolean})
             <div className="pb-3">
                 <p className="pb-1">{project.description}</p>
 
-                {project.features && project.features.length > 0 && (
+                {project.featureGroups ? (
+                    <div className="space-y-4 pt-3">
+                        {project.featureGroups.map((group) => (
+                            <section key={group.title}>
+                                <h3 className="font-semibold pb-1">{group.title}</h3>
+                                <ul className="pl-4 space-y-1">
+                                    {group.features.map((feature, index) => (
+                                        <li key={index} className="list-disc">{feature}</li>
+                                    ))}
+                                </ul>
+                            </section>
+                        ))}
+                    </div>
+                ) : project.features && project.features.length > 0 && (
                     <div>
                         <ul className="pl-4">
                         {
@@ -88,12 +101,17 @@ export function DisplayCard({index, project, selectedId, setSelectedId} : {proje
                 >
                     <motion.div 
                         layoutId={selectedId.toString()}
-                        className="bg-foreground rounded-lg p-5 text-background relative overflow-y-scroll w-11/12 lg:w-6/12 overflow-x-hidden"
+                        className="bg-foreground rounded-lg p-5 text-background relative max-h-full min-h-0 w-11/12 lg:w-6/12"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label={project.title}
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <ContentDisplay project={project} long={true}/>
+                        <div className="max-h-[calc(100dvh-7.5rem)] overflow-y-auto overflow-x-hidden">
+                            <ContentDisplay project={project} long={true}/>
+                        </div>
 
-                        <button className="w-8 aspect-square p-1 rounded-[50%] absolute top-3 bg-red-600 right-3 text-foreground font-bold" onClick={() => setSelectedId(null)}>X</button>
+                        <button aria-label="Close project details" className="w-8 aspect-square p-1 rounded-[50%] absolute top-3 bg-red-600 right-3 text-foreground font-bold" onClick={() => setSelectedId(null)}>X</button>
                     </motion.div>
                 </motion.div>
             )}

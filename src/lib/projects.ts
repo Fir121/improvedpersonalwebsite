@@ -8,11 +8,161 @@ export type ProjectType = {
     code_url: string | null;
     links: string[];
     features: string[];
+    featureGroups?: {
+        title: string;
+        features: string[];
+    }[];
     tech: string[];
     category: string;
 }
 
+// Keep the flagship work first; retain chronological ordering for existing projects.
+const featuredProjectOrder = ["siemens", "lectureloop", "ourpatch"];
+
 export const projects: ProjectType[] = [
+    {
+        // Résumé establishes November 2024; the first day is approximate.
+        "datetime": "2024-11-01",
+        "title": "Experiences at Siemens Energy",
+        "shorttitle": "siemens",
+        "images": [
+            "/project-images/siemens/1.jpg"
+        ],
+        "description": "Developed and maintained enterprise software, automation platforms, dashboards and advanced Generative AI systems at Siemens Energy. Owned the full software development lifecycle across multiple business units regionally and globally, from ideation and architecture to implementation, deployment and maintenance. Work included an internal platform comprising over 40 applications, large-scale AI systems processing highly specialised enterprise knowledge, and integrations across disconnected data sources. No links/images provided as the applications are proprietary and internal.",
+        "url": null,
+        "code_url": null,
+        "links": [],
+        "features": [],
+        "featureGroups": [
+            {
+                "title": "Enterprise Applications & Automation",
+                "features": [
+                    "Developed and maintained a centralised enterprise platform comprising over 40 internal applications, including workflow automation, management systems, feedback applications, reporting tools and operational dashboards.",
+                    "Built a Flask-based spare-parts warehouse management system, replacing a legacy Microsoft Access solution. Digitised workflows from parts ordering to customer delivery, introduced multi-user operation and extensive automation, and increased daily transaction capacity from tens to hundreds.",
+                    "Developed business intelligence and reporting solutions using Power BI, Tableau, Microsoft Fabric and custom web dashboards, including AI-enhanced applications.",
+                    "Delivered and maintained software for multiple business units, adapting applications to existing workflows while improving usability, efficiency and reliability."
+                ]
+            },
+            {
+                "title": "Generative AI & Data Engineering",
+                "features": [
+                    "Engineered production Generative AI applications serving over 1,800 active users globally, integrating highly domain-specific enterprise knowledge with advanced conversational AI capabilities.",
+                    "Developed large-scale OCR, document processing and ETL pipelines handling document collections ranging from thousands to hundreds of thousands of files, focusing on extraction accuracy, deduplication, traceability and reliable processing.",
+                    "Implemented retrieval-augmented generation (RAG) and multi-step agentic workflows enabling knowledge retrieval, cross-database analysis, report generation, diagram creation and intelligent decision support.",
+                    "Designed advanced retrieval systems for specialised enterprise information, addressing numerical accuracy, source attribution, document relevance and trustworthy responses across extensive datasets.",
+                    "Integrated multiple enterprise databases and cloud-based AI services, with comprehensive observability, evaluation pipelines, benchmarking and traceability using technologies including LangChain, LangGraph and Langfuse.",
+                    "Developed secure AI applications hosted on Azure, incorporating enterprise security requirements, penetration testing and technical validation involving Microsoft."
+                ]
+            },
+            {
+                "title": "Full-Stack Engineering & Infrastructure",
+                "features": [
+                    "Owned the end-to-end engineering lifecycle of multiple applications, including technical ideation, architecture, backend and frontend development, cloud deployment, maintenance and ongoing improvements.",
+                    "Developed solutions using Python frameworks including Flask, FastAPI and Quart, alongside JavaScript, React, Next.js, Flutter and Perl.",
+                    "Worked across PostgreSQL, Microsoft SQL Server, MongoDB, Azure AI services, Microsoft Fabric, AWS and Azure infrastructure."
+                ]
+            },
+            {
+                "title": "Impact & Recognition",
+                "features": [
+                    "Delivered automation and process improvements saving over 1,000 work hours monthly across departments in the Middle East.",
+                    "Won first place in the Middle East and Africa region and achieved a global top-three finish in the SIMPLIFY category of the Siemens Energy Passion for Energy Awards.",
+                    "Received the departmental Elevating AI award for developing effective AI applications delivering measurable business impact."
+                ]
+            }
+        ],
+        "tech": [
+            "Python",
+            "React",
+            "Azure OpenAI",
+            "LangChain",
+            "Langfuse",
+            "RAG",
+            "PostgreSQL",
+            "AWS",
+            "Azure",
+            "Fabric",
+            "Tableau",
+            "Flutter"
+        ],
+        "category": "Other"
+    },
+    {
+        "datetime": "2026-10-20",
+        "title": "LectureLoop",
+        "shorttitle": "lectureloop",
+        "images": [
+            "/project-images/lectureloop/1.jpg",
+            "/project-images/lectureloop/2.jpg",
+            "/project-images/lectureloop/3.jpg",
+            "/project-images/lectureloop/4.jpg",
+            "/project-images/lectureloop/5.jpg"
+        ],
+        "description": "LectureLoop was in the final shortlist at Teachathon 2026. LectureLoop is an interactive teaching platform designed to improve engagement and communication during university lectures. Lecturers can deliver live presentations, manage student questions, conduct polls and collect feedback through an integrated classroom environment. The platform unifies course documents, lecture recordings, transcripts and discussions within an AI-powered knowledge retrieval system, allowing students to search across their course content. It also incorporates AI-assisted teaching features, including feedback analysis, question management and interactive slide diagrams.",
+        "url": null,
+        "code_url": "https://github.com/Fir121/TeachAthon-Project",
+        "links": [],
+        "features": [
+            "Live lecture presentations with slide annotations, dedicated lecturer and student views, and classroom participation.",
+            "AI-powered semantic search across course documents, lecture transcripts and discussions, with course-specific retrieval and source attribution.",
+            "Live question management, polling, private feedback and persistent discussion forums.",
+            "AI-assisted feedback analysis, question clarification and grouping of similar teaching needs.",
+            "Lecture recording and replay with synchronised presentation annotations and access to historical classroom discussions.",
+            "AI-generated interactive slide diagrams with lecturer review and approval before publication.",
+            "Role-based course management, enrolment workflows and controlled access to teaching materials."
+        ],
+        "tech": [
+            "Python",
+            "FastAPI",
+            "React",
+            "TypeScript",
+            "PostgreSQL",
+            "Docker",
+            "OpenAI API",
+            "PaddleOCR",
+            "RAG",
+            "Codex",
+        ],
+        "category": "Website"
+    },
+    {
+        "datetime": "2026-10-03",
+        "title": "Our Patch",
+        "shorttitle": "ourpatch",
+        "images": [
+            "/project-images/ourpatch/1.jpg",
+            "/project-images/ourpatch/2.jpg",
+            "/project-images/ourpatch/3.jpg",
+            "/project-images/ourpatch/4.jpg",
+            "/project-images/ourpatch/5.jpg"
+        ],
+        "description": "Our Patch is a community sustainability game and winning project at AdaHack 2026, turning UK postcodes into houses on an interactive map. Each community receives a Green Score based on environmental data and residents' actions. Neighbours complete sustainability challenges, earn points, maintain daily activity streaks and compete on community leaderboards to improve their community's score. Built in a single day, the application integrates multiple environmental APIs with a custom pixel-art map to make collective climate action engaging and measurable.",
+        "url": null,
+        "code_url": "https://github.com/Fir121/Adahack-Postcode",
+        "links": [
+            "https://github.com/Fir121/Adahack-Postcode/blob/main/demo/DEMO%20Video.mp4",
+            "https://github.com/Fir121/Adahack-Postcode/blob/main/demo/AdaHack%20-%20Our%20Patch.pdf"
+        ],
+        "features": [
+            "Interactive postcode-based map with a custom animated pixel-art house and trees for the selected community, reflecting its Green Score.",
+            "Green Scores incorporating air quality, electricity carbon intensity data and community participation.",
+            "Sustainability challenges aligned with the United Nations Sustainable Development Goals, with task-specific proof and completion history.",
+            "Configurable GreenHour bonus windows awarding double task points, alongside daily activity streaks.",
+            "Community member leaderboards, points and visual progress indicators.",
+            "Integration with postcodes.io, Open-Meteo, Carbon Intensity API and OpenStreetMap, with MapLibre rendering and OpenFreeMap tiles.",
+            "Postcode exploration with contributions restricted in the interface to the signed-in user's own community."
+        ],
+        "tech": [
+            "Python",
+            "Flask",
+            "MongoDB",
+            "Next.js",
+            "TypeScript",
+            "MapLibre GL",
+            "Codex",
+        ],
+        "category": "Website"
+    },
     {
         "datetime": "2026-02-21",
         "title": "LLM Classifier",
@@ -416,6 +566,14 @@ export const projects: ProjectType[] = [
         "tech": ["Python", "Raspberry Pi", "Chatbot"],
         "category": "Other"
     },
-].sort((a, b) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime())
+].sort((a, b) => {
+    const aFeatured = featuredProjectOrder.indexOf(a.shorttitle);
+    const bFeatured = featuredProjectOrder.indexOf(b.shorttitle);
+    if (aFeatured !== -1 || bFeatured !== -1) {
+        return (aFeatured === -1 ? featuredProjectOrder.length : aFeatured)
+            - (bFeatured === -1 ? featuredProjectOrder.length : bFeatured);
+    }
+    return new Date(b.datetime).getTime() - new Date(a.datetime).getTime();
+})
 
 export const bDataURL = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAJ1BF8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDNoooruEFFFFABRRRQAUUUUAFJRRQAUUUUAFJS0lABRRRQAUUUUAJRRRSAKSiigAooooASiiigBKKKKQBSUtJQAUlLSUAFFFFIBKKKKAEpKWkpAFFFFACUUUUDEooopCEooooGJRRRSASiiigBKKKKAEooopAJRRRQAUlLSUgCiiigBKKKKACkpaSkAUUUUAFFFFABRRRQAlFFFABRRRQAUUUUAFLSUUALRRRQIKKKKBhRRRQIKKKKBhS0lLQAUUUUAFFFFABRRRQAUtJS0AFFFFABRRRQAUUUUwCiiigAooooAKKKKACiiigAooopAFFFFABRRRQAUUUUAFFFFACUUUUAFFFFABRRRQAUUUUAFFFFABSUtJQMKKKKACiiikAUUUUAFFFFAGtRRRXUSFFFFABRRRQAUUUlABRRRQAUUUUAJRRRQAUUUUAFJS0lABRRRSASiiigAoopKACiiigBKKKKQCUUUUAFJS0lABSUtJSAKSlpKACkpaSkAUUUlABRRSUAFJS0lIAoopKBhRRRSASiikoAKKKKAEooopAJRRRQAUlLSUgCiiigBKKKKACkpaSkAUUUUAFFFFABRRSUAFFFFABRRRQAUUUUAFFFFAC0UlLQAUUUUCCiiigYUUUUAFLSUUALRRRQAUUUUAFFFFABRRRQAtFJS0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABSUUUAFFFFABRRRQAUUUUAFFFFABRRSUDCiiigAooopAFFFFABRRRQAUUUUAa1FJRXUSLRSUUALSUUUAFFFFABRRRQAUlFFABRRRQAUUUUAJRRRQAUlLSUgCiiigApKWkoAKKKSkAUUUlABRRRQAlFFFIApKWkoAKSlpKACkpaSkAUlLSUAFJS0lABSUtJSAKSlpKBhRRSUgCkpaSgAoopKQBRRRQAlFFFACUUUUgCkpaSgAooooASiiikAUUUUAFFFJQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAtFJS0AFFFFABRRRQAUUUUALRSUUALRRRQAUUUUAFFFFABRRRQAUtJRQAtFJS0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFJRQAUUUUAFFFFABRRRQAUUUUAFFFJQMWkoooAKKKKQBRRRQAUUUUAFFFFABRRRQAUUUUAatFFFdRIUUUUAFFFFABRRSUALSUUUAFFFFABRRSUALSUUUAFFFJSAKKKKACiikoAKKKKACkoopAFJRRQAUUUlABRRSUgCiiigBKKKKAEooopAFJRRQAlFFFIBKKKKBhSUUUAFJS0lIApKKKACkpaSkAUlLSUAFFFJQAUUUUgEooooAKSlpKQBRRRQAUUUlABRRRQAUUUUAFFFFABRSUUALRSUUALRRRQAUUUUAFFFFABS0lFAC0UUUAFFFFABRRRQAUtJRQAtFJS0AFFFFABRRRQAUUUUAFFFFAC0UlFAC0UlFAC0UlFAC0UlFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFJQAtJRRQAUUUUDCiiikAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBq0UlFdRItJRRQAUUUUAFFFFABRRSUALSUUUAFFFFABRSUUgCiiigAoopKACiiigApKKKQBSUtJQAUUUUAJRRRSAKSiigApKWkoAKSlpKQBRRSUAFFFJQAUUUlIAoopKBhRRRSASiikoAKKKKAEooopAJRRRQAUlFFIApKWkoAKKKSgAooopAFFFJQAUUUUAFFFFABSUUUAFFFFIAooooAKKKKACiiigApaSigBaKSlpgFFFFABRRRQAtFJRQAtFFFABRRRQAUUUUAFFFFAC0UlFAC0UlLQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFJRQAtFJRQAUUUUAFFFFAwooopAFFFFABRRRQAUUlFAC0lFFABRRRQAUUUUAFFFFABRRRQBq0UlFdRItFJRQAtJRRQAUUUUAFFFFABRSUUgFpKKKACiiigAopKKACiiigApKKKQBRSUUAFFFFABSUUUAFJRRSAKKKSgAoopKACiiikAlFFFACUUUUgEooooAKSiigYUlFFIApKKKACkoopAFJS0lABSUtJQAUUUlIAooooAKSiikAUUUlABRRRQAUUUlABRRRSAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBaKSimAtFFFABRRRQAtFJRQAtFJS0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUALRSUUAFFFFABRRRQAUUUUAFFFFABRRRQMKKKKQBRRRQAUUlFAC0lFFABRRRQAUUUUAFFFFABRRRQAUUlFAC0UlFAC0UlFAGrRSUV0ki0UlFAC0UlFAC0lFFABRRRQAUUUlAC0UlFABRRRQAUUlFABRRSUgFpKKKACiikoAKKKKACkoopAFFFJQAUUUlABRRRSAKSiigApKKKACkoopAFJRRQMKSlpKQgoopKBhRRSUAFFFJSAKKKSgAooopAFJRRQAUlFFABRRSUgCiiigAopKKACiiikAUUUlAC0UlFABRRRQAUUUUAFFFFABS0lFAC0UlFAC0UlFAC0UUUAFFFFABRRRQAtFJRQAtFFFMAooooAKKKKACiiigApaSigBaKSigBaKSigBaKSigBaKSigBaKSigBaKSigBaKSigAooopDCiiigAooooAKKKKACiiigAoopKAFopKKAFpKKKACiiikAUUUUDCiiigAooooAKKKKANSikorqIFopKKAFopKKAFpKKKACiiigAoopKAFopKKACiikpALSUUUAFFFFABSUUUAFFFJQAtJRRSAKSiigAoopKACiiikAUlFFABSUUUAFJRRSAKKKSgAoopKACiikpAFFFJQMKKKKQBSUUlABRRRSAKSiigApKKKACiikpAFFFFABSUUUAFFFJSAWkoooAKKKKACiikoAWikooAWikooAWikooAWikooAWikooAWiiigAooooAKKKKAFopKKAFopKWgAooooAKKKKAClpKKAFopKKAFopKKYC0UlFAC0UUUgCiiigAooooAKKKSgBaKSigYtFJRQAtFJRQAtFJRQAUUUUAFFFFABRRRQAUUUlIBaKSigYtFJRQAtJRRQAUUUUAFFFFABRRRQAUUUUAalFJRXUQLRSUUALSUUUAFFFFABRSUUALRSUUgCiiigAopKKAFpKKKACiikoAWkoooAKKSikAUUUlAC0lFFABRRSUgCiikoAWkopKAFpKKKQBRSUUAFFFJQAUUUlIAoopKBhRRSUgFpKKKBBSUUUDCkoopAFJRRQAUUUlIAooooAKSiigAopKKQBRRRQAUUlFABRRRQAUUUlIBaKSigBaKSigBaKSigBaKSigBaKSigBaKKKACiiimAtFJRQAtFJRQAtFJS0AFFFFABRRRQAtFJRQAtFJRQAtFJRQAtFJRQAtFJS0DCiikoAWikooAWikooAWikooAWikooAWikooAWikooAKKKKQBRRRQMKKKSgBaKSigBaKSigBaKSigAooooAKKKKACiiikAUUUUAFFFFAGnRSUV1EC0UlFAC0UlFAC0UlFAC0UlFABRRRQAUUUlAC0UlFABRRSUALRSUUgCiikoAWkoooAKKKSgBaSiikAUUlFABRRSUAFFFJSAWkoooAKSiigApKKKQBRRSUAFFFJSAKKKSgBaSiigYUlFFIApKKKACikopAFFFJQAtJRSUALSUUUgCiikoAWkoooAKKSikAUUUUAFFFFABRSUUALRSUUALRSUUALRSUUALRSUUALRSUUALRRRQAUtJRQAtFJRQAtFJRQAtFJRTAWiiigBaKSigBaKSigBaKSigYtFJRQAtFJRQAtFJRQAtFJRQAtFJRQAtFJRQAtFJRSAWikooGLSUUUAFFFJQAtFJRQAtFJRQAtFJRSAWikooAWkoooGFFFFABRSUUALRSUUALRSUUALRSUUAalFJRXUZi0UlFAC0UlFAC0lFFABRRSUALRSUUALRSUUgCikooAWikooAKKKKACikooAWkopKQC0UlFABRRSUALSUUUAFFJRSAKKKSgBaSikoAWkoopAFJRRQAUUlFIAopKKACiikoAKKKSkAtJRRQAUlFFIYUUlFAgoopKACiikpDFpKKKBBRSUUhhRRRQAUUlFABRRSUALRSUUgFopKKACiiigAooooAWikooAWikooAWikopgLRSUUALRSUtABS0lFAC0UlFAC0UlFAC0UlFAC0UlFAC0UUUDCiiigApaSigBaKSigBaSiigAooooAWikooAWkoooGFFFJQAtFJRQAtFJRQAtFJRSAWikooGLRSUUAFFFFABRSUUALRSUUgFopKKAFopKKAFopKKAFpKKKACiiigDTopKK6jMWikooAWikooAWikooAWkoooAKKKSgBaKSigBaKSigAoopKAFopKKQC0lFJQAtFJRQAUUUlAC0UlFIAopKKAFpKKSgBaSiikAUUlFABRRSUALSUUlIBaSiigAopKKACikopAFFFJQAUUUlIBaSiigApKKKACikopAFFFJQAUUUUgCkoooAKKSigAooopAFFJRQMWikooAWkoooAKKSikAtFJRQAtFJS0AFFFFMApaSigBaKSigBaKSigBaKSigBaKSloAKKKKYC0UlFAxaKSigBaKSigBaKSigBaKSigBaKSigBaKSigYtFJRQAtFJRSAWikooAWikooAWikooGLRSUUAFFFFIAopKKAFopKKAFopKKQC0UlFFxhRRRRcAooopAFFFFABRRRQAUUUUAFFFFAGlRSUV2GQtFJRQAtFJRQAtFJRQAtFJRQAtFJRSAKKSigBaKSigBaSiigAopKKAFopKKACikopALRSUUAFFJRQAtJRSUgFopKKACiikoAWkopKAFpKKKQBRSUUAFFFJQAtJRSUgFpKKKACikopAFFJRQAUUUlIBaSikoAWkopKAFopKKQBRSUUAFFFJSAWkoooAKKSikAtJRRQAUUUlAxaKSikAtFJRQAtFJRQAtFJRQAtFJRQAtFJRQAtFJRTAWikooAWikpaAClpKKBi0UlFAC0UlFMBaKSigBaKSigBaKSigBaKSloGFFFFABRSUUALRSUUgFopKKAFopKKLjFopKKLgLRSUUrgLRSUUXAWikoouAtFJRSAWikooAWikooAWikooAWikooAWikooGLRSUUALRSUUALRSUUALRSUUAaNFJRXWZC0UlFAC5opKKAFopKKAFopKKAFopKKACikooAWikooAWikopALSUUlAC0UlFAC0lFJQAtFJRSAKKKSgBaKSigAopKKAFpKKKQBRSUUAFFFJQAtJRSUgFopKKACikooAKKSikAUUUlAC0lFJSAWkoooAKKSigAopKKQBRSUUAFFFJSAWkoopAFFJRSAWkoooAKKKKBhRRRQAUUUlAC0UlFAC0UlFAC0lFFABRRRQAUUUUAFFFFAC0UlFAC0UlFAC0UlLQAUUUUDCiiigAooooAKKKKAClpKKAFopKKBi0UlFAC0UlFAC0UlLQAUUUUgCiiigAooooGFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAF+ikorrMxaKSigBaKSikAtFJRQAtFJRQAtFJRQAtJSUUALRSUUALRSUUALSUlFAC0UlFIBaSikoAWikooAWkopKAFopKKQC0lFJQAtFJRQAUUlFIBaSikoAWikooAKKSikAUUUlAC0lFJQAtJRSUgFopKKACikopAFFJRQAUUUlIBaSiikAUUlFIAooooGFFFFABRSUUALSUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUALRSUUALRSUUALRRRQMKKKKACiiigAooooAKKKKACiiikMKKKKAClpKKAFopKKAFopKWgAooooAKKKKACiiigAooooGFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBdopM0V1GYtFJRQAtFJRQAtFJmjNAC0UmaM0ALRTaKAFopKKQC0UlFAC0UlFABRSUUALRSUUALSUUlAC0UlFIBaSikzQAtFJRQAtJRSUgFopKKAFpKTNFAC5pKKSkAtFJRQAUUlFAC0lGaSkAtJRSUALRSUUgCikooAKKSikAUUUlK4C0lFFIAooooGFFFJQAtFJRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUtJRQAtFJRQAtFFFAwooooAKKKKACiiigAooooAKKKKACiiikMKKKKACiiigBaKSigBaKSigBaKSloAKKKKACiiigAooooAKKKKACiiigAooooAKKKKALdFJmjNdJAtFJmigBaKbRQA6im0UALRSUUALRSZooAWikooAWikzSZoAdSUlFAC5opKKQC0UlGaAFpKTNFAC5ozSUUAFFJRSAWikozQAtJSZooAXNFJmkzQAtFJRSAWkpKM0ALRSZpKQC5opKM0AFGaSikAtJRSUALSUUUrgFFJRSuAtJRRSAKKKKBhRSUUALSUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUALRSUUALRSUtABRRRQMKKKKACiiigAooooAKKKKACiiigAooopDCiiigAooooAKKKKACiiigApaSigBaKSigBaKSigBaKSigCzmjNJmjNdJAuaKTNGaAFopM0ZoAWikzRmkAuaM03NGaAHZozTc0UAOzSUlFAC0UmaM0ALRSZozQAuaM03NGaAFzRSUUgFopKM0ALSUmaM0ALmjNJRQAtJSZozSAXNGaSkoAWikzRQAuaM0lJSAWikzRmgQtJmkopDFopKKACiikpXAWkoopXAKKKKQwopKKAFpKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFopKKAFopKWgAooooGFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRSAKKKKBhRRRQAUUUUATUUmaM10EC0ZpM0ZoAXNGaTNGaAFzRmkzRmgBaM0maM0ALmjNNzRmgB2aM03NGaAHZpM0maM0ALmjNJmjNIBc0ZpM0maAHZozTc0ZoAXNGaSjNAC0ZpuaKQC5ozSUUALRmkzSZoAXNGaSikAtFJRQAtJRSUrgLRSUUrgLSUUUrgFFJRSGLRSUUALSUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUALRSUUALRSUtABRRRQMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigB+aM0maM1uSLmjNJmjNAC5ozSUUALmjNJmikAuaM0lFAC5ozTaM0AOozTc0ZoAdSZpM0UALmjNJRQAtGaSikAuaM0lJQAtFJRQAtFJRSuAtFJRRcBaSiilcAoopKVxi0UlFK4C0lFFIAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKWkooAWikooAWikpaACiiigAooooGFFFFABRRRQAUUUUAFFFFAC0UlFa3JFopKKLgLRSUUXAWikoouAUUUUXAKKKKLgFFFFK4BRRRRcAoooouAUUUUrgFFFFFxhRRSUrgLRSUUrgLSUUUXAKKKKQBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUALRSUUALRSUUALRSUtABRRRQAUUUUAFFFFXcQUUUUXGFFFFFwCiiii4BRRRSuAUUUUXAKKSii4C0UlFK4C0UlFFwCiiikAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUwCiiigAooopAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAC0UUVVgCiiiiwBRRRRYAoooosAlFLRSsAlFLRRYBKKWkosAUUUUgCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAWinUVoA2inUUANopaKBCUUtFACUUtFIBKKWigBKKWjFACUUuKSlYAoooosMSilopWASiloosAlFFFIAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAkopcUYrQBKKXFFACUUtFACUYpaKAG4oxTqKBDcUUtGKAEopcUYoASilooAbRS0UgEopaKAEpKdSUAJRS0UgEopaKVgEooopDCkpaKAEopaKAEopaKAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAJsUYpaK1ASilooATFGKWigBMUYpaKBCUUtFACUlOooAbRS0UgExRilooASkp1FADcUYpaKAEopcUUANopaKQCUUtJQAlFLRSASiiilYBKKWilYBKKKKACiiigYUUUUAJRS0UAJRS0lABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBYopaK1ASilooASilooASilooASilooASkp1JQISilooASilooASilopANopaKAEopaKAG0UtFACUUtJQAlFLRSAbRS0UAJSU6kpAJRS0lIApKWikAlFLSUAFFFFABRRRQMKKKKAEopaKAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKALVFLRWwhKKWigBKKWigBKKWkoGFFFFACUUtFACUUtFIQlFLSUAJRS0UAJRS0UAJSUtFACUUtFIBKSlooASilpKAEopaKQCUlLRQISkp1JQAlFLSUgEopaKQCUUUUhiUUtFIBKKKKYBRRRQMKKKKAEopaKAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigC5RRRWwBRRRQAlFLRQISilooASilooASilpKACiiigBKKWigBKKWikA2ilooASilooASkpaKAEopaSgApKWikAlJS0UAJRS0lACUUtFIQ2ilooASkpaKQCUUUUgEopaSkMKKKKQCUUtJQAUUUUwCiiigYUUUUAJRS0UAJRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFLRQAlFLRQAlFLRQAlLRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFJS0UAJRS0UAJRS0UAJRS0UAJRS0UAJRS0UAXKKKK3AKKKKQBRRRQAUlLRQAlFLRQISilooASiiigApKWigBKKWigBKKKKAEopaKQCUUUUAJRS0UAJSUtFACUUtJSASilpKACkpaKAEpKWikISkpaKAEopaSkAlFLSUAJRS0lSAUUUUhhSUtFACUUUUwCiiigYUUUUAFFFFACUUtFACUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRS0UAJRS0UAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUCCiiigAooooAKKKKACiiigAooooAKKWikAlFLRQAlFLRQAlFLRQAlFLRQAlFLSUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUwCiiigAooooAKKKKACiiigAooooAu0UUVuAUUUUAFFFFABRRRQAUlLRQAlFLRSASilpKACkpaKAEopaSgAooooAKSlooASiiikAlFLRQAlFFFACUUtJQAlFLRSASkpaKAEpKWigQlJS0UgEooooASiiikAlFLSUAJRS0lSAUUUUhhSUtFACUUUUAFFFFMAooooGFFFFABSUtFACUUtFACUUUUAFFFFABRRRQAUUUUAFFFFABRRS0AJRS0UAJS0UUAFFFFABRRRQAUUUUAFFFFABRRRQIKKKWgBKKWigBKWiigAooopgFFFFABRRRQAUUUUAFFFFIAooooAKKKKACiiigAooopAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBdoooroAKKKKACiiigApKWigBKKWigBKKWkoAKKKKACkpaKQCUUtJQAUlLRQAlFLSUAFJS0UAJRS0lIApKWigBKKKKAEopaSgApKWkpAFJS0UCEpKWigBKSlopAJSUtFACUUUUgEooopAJRS0lIAooopDCkpaKAEooooAKKKKYBRRRQMKKKKACiiigAooooAKSlooASilooASloooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKBBRRRQAUtFFABRRRTAKKKKACiiigAooooAKKWigQlFLRQAlLRRQAUUUUAFFFFABSUtFACUUtFIBKKWigBKKWigBKKWkpDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKALtFLRXQAlFLRQAlFLSUAFFFFABRRRQAUUUUAFJS0UAJRS0lABRRRQAlFLSUgCiiigApKWigBKSlooASiiikAUlLRQAlJS0UAJRRRQAlFLSUgCkpaSgQlFLSUAFJS0lIBKKWkoAKSlpKQBRRRSASiiikMKKKKQCUUtJQAUUUUwCiiigYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAgooooAKKKWgAooooAKKKKYBRRRQAUUtFAgooopgFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFIAooooAKKKKACiiikAUUUUAFFFFIAooooAKKKKACkpaKAEopaKAEopaKAEopaKAEopaKAEopaKAEooooAKKKKACiiigC9RRRXQMKKKKACiiigApKWigBKKWkoAKKKKACiiigAooooASilpKACiiikAlFFFABRRRQAlFLSUAFJS0lIAooooASilpKACkpaSgApKWkpAFJS0UCEpKWigBKSlopAJSUtFACUUUUhCUUUUhhSUtJSAKKKKQwooooASiiigAooopgFFFFAwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigQUUUUAFFFFABS0UUAFFFFMAooooAKWiimIKKKKACiiigAooooAKKKKACiiigAopaKAEopaKAEopaSgAoopaAEopaKQCUUtFACUUUUAFFFFIAooooAKKKKQBRRRQAUUUUgCiiigAooopgFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAXaKKK6BhRRRQAUUUUDCiiigQUUUUAJRRRQAUUUUAFFFFABRRRQAlFFFABSUtJSAKKKKACkpaSgAooooASiiikAUlLSUAFJS0UAJRRRSASiiigQlFFFACUUUUgEooooASiiikISilpKBhSUtJSAKKKKQwooopAJRS0lABRRRTAKKKKACiiigYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAgooooAKWkpaACiiimAUUUUAFFFLQIKKKKYBRRRQAUUUUAFFFFABRRRQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFIApKWkoAKKKKQBRRRQAUUUUgCiiigAooopAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBeooorqGJRRRSAKKKKACiiigAooooAKSiigAooooAKKKKACiiigBKKKKACkoopAFFFFABSUUUAFFFFACUUUUgCkoooAKKKKAEooopAJRRRQISiiigBKKKKQCUUUUAJRRRQIKSiikMKKKKQCUUUUhhRRRSAKSiigAooopgFFFFABRRRQMKKKKACiiigAooooAKKKKACiiigAooooAKKKKBBRRRQAUUUUAFLRRQAUUUUwCiiigApaKKYgooooAKKKKACiiigAooooAKWiigAooooAKKKKACiiigAooooAKKKKACiiigAooopAFJRRQAUUUUAFFFFIAooopAFFFFABRRRSAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q=="

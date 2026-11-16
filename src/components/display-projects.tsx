@@ -23,7 +23,7 @@ export function MainDisplay(){
     const [projectsArr, setProjectsArr] = useState<ProjectType[]>(projects)
 
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen pb-28 md:pb-0">
             <div className="p-6 pb-0">
                 <h1 className="text-4xl font-bold w-100 text-center">MY WORK</h1>
 
