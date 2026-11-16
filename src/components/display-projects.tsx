@@ -1,30 +1,26 @@
 "use client"
 import { projects, ProjectType } from "@/lib/projects";
 import { DisplayCard } from "./project-card";
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { SearchBar } from "./searchProjects";
 
-export function MainDisplay(){
-    const [selectedId, setSelectedId] = useState<string|null>(null)
-    const [projectsArr, setProjectsArr] = useState<ProjectType[]>(projects)
-    const [firstLoad, setFirstLoad] = useState(true)
+function subscribeToHash(onChange: () => void) {
+    window.addEventListener("hashchange", onChange)
+    return () => window.removeEventListener("hashchange", onChange)
+}
 
-    useEffect(() => {
-        if (firstLoad){
-            const hash = window.location.hash;
-            if (hash.length > 1){
-                setSelectedId(hash.slice(1))
-            }
-            setFirstLoad(false)
-            return;
-        }
-        if (selectedId){
-            window.location.hash = "#"+selectedId
-        }
-        else{
-            window.location.hash = "#none"
-        }
-    }, [selectedId])
+function getSelectedId() {
+    const id = window.location.hash.slice(1)
+    return id && id !== "none" ? id : null
+}
+
+function setSelectedId(id: string | null) {
+    window.location.hash = id ?? "none"
+}
+
+export function MainDisplay(){
+    const selectedId = useSyncExternalStore(subscribeToHash, getSelectedId, () => null)
+    const [projectsArr, setProjectsArr] = useState<ProjectType[]>(projects)
 
     return (
         <div className="relative min-h-screen">

@@ -6,16 +6,17 @@ interface IRedoAnimTextProps {
   delay: number;
 }
 
+const texts = [
+  "a software developer.",
+  "a designer.",
+  "an innovator.",
+  "a problem solver.",
+  "never gonna give you up, never gonna let you down!",
+  "a COMPUTER SCIENTIST!"
+];
+
 function RedoAnimText({ delay }: IRedoAnimTextProps) {
   const textIndex = useMotionValue(0);
-  const texts = [
-    "a software developer.",
-    "a designer.",
-    "an innovator.",
-    "a problem solver.",
-    "never gonna give you up, never gonna let you down!",
-    "a COMPUTER SCIENTIST!"
-  ];
 
   const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
   const count = useMotionValue(0);
@@ -26,7 +27,7 @@ function RedoAnimText({ delay }: IRedoAnimTextProps) {
   const updatedThisRound = useMotionValue(true);
 
   useEffect(() => {
-    animate(count, 60, {
+    const controls = animate(count, 60, {
       type: "tween",
       delay: delay,
       duration: 1,
@@ -47,7 +48,8 @@ function RedoAnimText({ delay }: IRedoAnimTextProps) {
         }
       }
     });
-  }, []);
+    return () => controls.stop();
+  }, [count, delay, textIndex, updatedThisRound]);
 
   return <motion.span className="inline">{displayText}</motion.span>;
 }
@@ -95,8 +97,8 @@ export function AnimText({ delay }: IAnimTextProps) {
       duration: 1,
       ease: "easeInOut" as const,
     });
-    return controls.stop;
-  }, []);
+    return () => controls.stop();
+  }, [count, delay]);
 
   return (
     <span className="text-xl text-accent">

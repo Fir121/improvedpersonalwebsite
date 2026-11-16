@@ -13,7 +13,7 @@ export function SearchBar({setProjectsArr}: {setProjectsArr: (projects: ProjectT
             return true
         })
         setProjectsArr(filteredProjects)
-    }, [search]);
+    }, [search, setProjectsArr]);
 
     return (
         <div className="w-full mt-2">
