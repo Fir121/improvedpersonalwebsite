@@ -16,77 +16,8 @@ export type ProjectType = {
     category: string;
 }
 
-// Keep the flagship work first; retain chronological ordering for existing projects.
-const featuredProjectOrder = ["siemens", "lectureloop", "ourpatch"];
-
 export const projects: ProjectType[] = [
-    {
-        // Résumé establishes November 2024; the first day is approximate.
-        "datetime": "2024-11-01",
-        "title": "Experiences at Siemens Energy",
-        "shorttitle": "siemens",
-        "images": [
-            "/project-images/siemens/1.jpg"
-        ],
-        "description": "Developed and maintained enterprise software, automation platforms, dashboards and advanced Generative AI systems at Siemens Energy. Owned the full software development lifecycle across multiple business units regionally and globally, from ideation and architecture to implementation, deployment and maintenance. Work included an internal platform comprising over 40 applications, large-scale AI systems processing highly specialised enterprise knowledge, and integrations across disconnected data sources. No links/images provided as the applications are proprietary and internal.",
-        "url": null,
-        "code_url": null,
-        "links": [],
-        "features": [],
-        "featureGroups": [
-            {
-                "title": "Enterprise Applications & Automation",
-                "features": [
-                    "Developed and maintained a centralised enterprise platform comprising over 40 internal applications, including workflow automation, management systems, feedback applications, reporting tools and operational dashboards.",
-                    "Built a Flask-based spare-parts warehouse management system, replacing a legacy Microsoft Access solution. Digitised workflows from parts ordering to customer delivery, introduced multi-user operation and extensive automation, and increased daily transaction capacity from tens to hundreds.",
-                    "Developed business intelligence and reporting solutions using Power BI, Tableau, Microsoft Fabric and custom web dashboards, including AI-enhanced applications.",
-                    "Delivered and maintained software for multiple business units, adapting applications to existing workflows while improving usability, efficiency and reliability."
-                ]
-            },
-            {
-                "title": "Generative AI & Data Engineering",
-                "features": [
-                    "Engineered production Generative AI applications serving over 1,800 active users globally, integrating highly domain-specific enterprise knowledge with advanced conversational AI capabilities.",
-                    "Developed large-scale OCR, document processing and ETL pipelines handling document collections ranging from thousands to hundreds of thousands of files, focusing on extraction accuracy, deduplication, traceability and reliable processing.",
-                    "Implemented retrieval-augmented generation (RAG) and multi-step agentic workflows enabling knowledge retrieval, cross-database analysis, report generation, diagram creation and intelligent decision support.",
-                    "Designed advanced retrieval systems for specialised enterprise information, addressing numerical accuracy, source attribution, document relevance and trustworthy responses across extensive datasets.",
-                    "Integrated multiple enterprise databases and cloud-based AI services, with comprehensive observability, evaluation pipelines, benchmarking and traceability using technologies including LangChain, LangGraph and Langfuse.",
-                    "Developed secure AI applications hosted on Azure, incorporating enterprise security requirements, penetration testing and technical validation involving Microsoft."
-                ]
-            },
-            {
-                "title": "Full-Stack Engineering & Infrastructure",
-                "features": [
-                    "Owned the end-to-end engineering lifecycle of multiple applications, including technical ideation, architecture, backend and frontend development, cloud deployment, maintenance and ongoing improvements.",
-                    "Developed solutions using Python frameworks including Flask, FastAPI and Quart, alongside JavaScript, React, Next.js, Flutter and Perl.",
-                    "Worked across PostgreSQL, Microsoft SQL Server, MongoDB, Azure AI services, Microsoft Fabric, AWS and Azure infrastructure."
-                ]
-            },
-            {
-                "title": "Impact & Recognition",
-                "features": [
-                    "Delivered automation and process improvements saving over 1,000 work hours monthly across departments in the Middle East.",
-                    "Won first place in the Middle East and Africa region and achieved a global top-three finish in the SIMPLIFY category of the Siemens Energy Passion for Energy Awards.",
-                    "Received the departmental Elevating AI award for developing effective AI applications delivering measurable business impact."
-                ]
-            }
-        ],
-        "tech": [
-            "Python",
-            "React",
-            "Azure OpenAI",
-            "LangChain",
-            "Langfuse",
-            "RAG",
-            "PostgreSQL",
-            "AWS",
-            "Azure",
-            "Fabric",
-            "Tableau",
-            "Flutter"
-        ],
-        "category": "Other"
-    },
+    // Repository history begins on 29 August 2026.
     {
         "datetime": "2026-10-20",
         "title": "LectureLoop",
@@ -162,6 +93,109 @@ export const projects: ProjectType[] = [
             "Codex",
         ],
         "category": "Website"
+    },
+    {
+        "datetime": "2026-08-29",
+        "title": "CalPlan",
+        "shorttitle": "calplan",
+        "images": [
+            "/project-images/calplan/1.jpg",
+            "/project-images/calplan/2.jpg",
+            "/project-images/calplan/3.jpg",
+            "/project-images/calplan/4.jpg",
+            "/project-images/calplan/5.jpg"
+        ],
+        "description": "CalPlan brings calendars, tasks, reminders and iPhone alarms into one personal planning workspace. Its Next.js web client and native SwiftUI app share a FastAPI backend and PostgreSQL source of truth through a versioned REST API. It supports recurring events, preparation and travel time, prioritised tasks, class attendance, and one-way Outlook calendar synchronisation. Declarative rules generate reminders and alarms around selected events or task deadlines. Background workers reconcile schedules and integrations, while the iOS client adds local notifications, AlarmKit, widgets and cached offline reads.",
+        "url": "https://calplan.firasadil.com",
+        "code_url": null,
+        "links": [],
+        "features": [
+            "Today dashboard and day, week and month calendars with timezone-aware recurring events and scoped series editing.",
+            "Prioritised tasks with optional due dates, categories, tags and completion tracking.",
+            "Preparation and travel time around events, class attendance tracking, and iCalendar import into editable event drafts.",
+            "One-way Outlook calendar synchronisation through Microsoft Graph, preserving application-owned notes, tags and reminders.",
+            "Absolute and relative reminders through notifications, email and iOS AlarmKit, with configurable snooze and per-event silencing.",
+            "Declarative automation rules generate reminders for matching tasks or events, including the first event of each day.",
+            "Native SwiftUI client with widgets, cached offline reads and Apple/Google sign-in, sharing the same backend as the web client."
+        ],
+        "tech": [
+            "Next.js",
+            "TypeScript",
+            "React",
+            "SwiftUI",
+            "FastAPI",
+            "Python",
+            "PostgreSQL",
+            "Docker",
+            "Codex"
+        ],
+        "category": "App"
+    },
+    {
+        "datetime": "2026-06-01",
+        "title": "Experiences at Siemens Energy",
+        "shorttitle": "siemens",
+        "images": [
+            "/project-images/siemens/1.jpg"
+        ],
+        "description": "Developed and maintained enterprise software, automation platforms, dashboards and advanced Generative AI systems at Siemens Energy. Owned the full software development lifecycle across multiple business units regionally and globally, from ideation and architecture to implementation, deployment and maintenance. Work included an internal platform comprising over 40 applications, large-scale AI systems processing highly specialised enterprise knowledge, and integrations across disconnected data sources. No links/images provided as the applications are proprietary and internal.",
+        "url": null,
+        "code_url": null,
+        "links": [],
+        "features": [],
+        "featureGroups": [
+            {
+                "title": "Enterprise Applications & Automation",
+                "features": [
+                    "Developed and maintained a centralised enterprise platform comprising over 40 internal applications, including workflow automation, management systems, feedback applications, reporting tools and operational dashboards.",
+                    "Built a Flask-based spare-parts warehouse management system, replacing a legacy Microsoft Access solution. Digitised workflows from parts ordering to customer delivery, introduced multi-user operation and extensive automation, and increased daily transaction capacity from tens to hundreds.",
+                    "Developed business intelligence and reporting solutions using Power BI, Tableau, Microsoft Fabric and custom web dashboards, including AI-enhanced applications.",
+                    "Delivered and maintained software for multiple business units, adapting applications to existing workflows while improving usability, efficiency and reliability."
+                ]
+            },
+            {
+                "title": "Generative AI & Data Engineering",
+                "features": [
+                    "Engineered production Generative AI applications serving over 1,800 active users globally, integrating highly domain-specific enterprise knowledge with advanced conversational AI capabilities.",
+                    "Developed large-scale OCR, document processing and ETL pipelines handling document collections ranging from thousands to hundreds of thousands of files, focusing on extraction accuracy, deduplication, traceability and reliable processing.",
+                    "Implemented retrieval-augmented generation (RAG) and multi-step agentic workflows enabling knowledge retrieval, cross-database analysis, report generation, diagram creation and intelligent decision support.",
+                    "Designed advanced retrieval systems for specialised enterprise information, addressing numerical accuracy, source attribution, document relevance and trustworthy responses across extensive datasets.",
+                    "Integrated multiple enterprise databases and cloud-based AI services, with comprehensive observability, evaluation pipelines, benchmarking and traceability using technologies including LangChain, LangGraph and Langfuse.",
+                    "Developed secure AI applications hosted on Azure, incorporating enterprise security requirements, penetration testing and technical validation involving Microsoft."
+                ]
+            },
+            {
+                "title": "Full-Stack Engineering & Infrastructure",
+                "features": [
+                    "Owned the end-to-end engineering lifecycle of multiple applications, including technical ideation, architecture, backend and frontend development, cloud deployment, maintenance and ongoing improvements.",
+                    "Developed solutions using Python frameworks including Flask, FastAPI and Quart, alongside JavaScript, React, Next.js, Flutter and Perl.",
+                    "Worked across PostgreSQL, Microsoft SQL Server, MongoDB, Azure AI services, Microsoft Fabric, AWS and Azure infrastructure."
+                ]
+            },
+            {
+                "title": "Impact & Recognition",
+                "features": [
+                    "Delivered automation and process improvements saving over 1,000 work hours monthly across departments in the Middle East.",
+                    "Won first place in the Middle East and Africa region and achieved a global top-three finish in the SIMPLIFY category of the Siemens Energy Passion for Energy Awards.",
+                    "Received the departmental Elevating AI award for developing effective AI applications delivering measurable business impact."
+                ]
+            }
+        ],
+        "tech": [
+            "Python",
+            "React",
+            "Azure OpenAI",
+            "LangChain",
+            "Langfuse",
+            "RAG",
+            "PostgreSQL",
+            "AWS",
+            "Azure",
+            "Fabric",
+            "Tableau",
+            "Flutter"
+        ],
+        "category": "Other"
     },
     {
         "datetime": "2026-02-21",
@@ -567,12 +601,6 @@ export const projects: ProjectType[] = [
         "category": "Other"
     },
 ].sort((a, b) => {
-    const aFeatured = featuredProjectOrder.indexOf(a.shorttitle);
-    const bFeatured = featuredProjectOrder.indexOf(b.shorttitle);
-    if (aFeatured !== -1 || bFeatured !== -1) {
-        return (aFeatured === -1 ? featuredProjectOrder.length : aFeatured)
-            - (bFeatured === -1 ? featuredProjectOrder.length : bFeatured);
-    }
     return new Date(b.datetime).getTime() - new Date(a.datetime).getTime();
 })
 

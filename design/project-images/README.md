@@ -35,3 +35,25 @@ photographs are used.
 
 [identity]: https://markenfels.ch/en/referenzen/siemens-energy-brand-experience/
 [logo]: https://www.siemens-energy.com/content/dam/siemensenergy-aem/images/logo/SE_Logo_White.png
+
+## CalPlan
+
+CalPlan's first three images use the same iMac template against the application's
+Ink background (`#111827`). Images four and five pair genuine 1206 × 2622 iPhone 17
+simulator captures on a neutral landscape canvas, retaining their original proportions.
+The native screens use the existing UI-test fixture mode, populated with local demo
+events/tasks in a temporary project copy; the captions identify demonstration data.
+
+Use `node scripts/render-calplan-images.mjs /path/to/captures` to regenerate them.
+The external capture directory must contain `web-1.png`–`web-3.png` and
+`ios-home.png`, `ios-calendar.png`, `ios-task.png`, `ios-reminder.png`.
+Original screenshot backups are not stored in this repository.
+
+Captured on 17 November 2026. Web captures used a separate local PostgreSQL test
+database, real API writes, and the repository's supported test-session mechanism.
+The worker processed the displayed reminder rules without live provider credentials.
+Native captures used iPhone 17 / iOS 26.5 with Xcode 27.2 (the available toolchain,
+rather than the README's Xcode 26.6). Only a temporary project copy's UI-test fixture
+data and screenshot test were adjusted; the original Scheduler working tree was not
+edited. The native test and build succeeded. Live OAuth, Outlook sync, email/APNs,
+widgets on a Home Screen and physical-device AlarmKit delivery were not exercised.
